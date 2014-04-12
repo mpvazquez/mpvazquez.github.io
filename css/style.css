@@ -1,0 +1,196 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Lato:100);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+body {
+	background-color: rgba(0, 0, 0, .7);
+}
+
+header {
+	background-image: url(../images/brickwall.png);
+	background-repeat: repeat;
+	text-align: center;
+	height: 248px;
+}
+
+h1 {
+	font-family: Oswald;
+	font-size: 50px;
+	margin: 0;
+}
+
+h2 {
+	font-family: Lato;
+	font-size: 2em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h3 {
+	font-family: Lato;
+}
+
+p {
+	text-align: justify;
+	font-size: 1em;
+	color: white;
+	font-family: Open Sans;
+}
+
+ul {
+	background-color: rgba(255, 255, 255, .5);
+	padding: 10px;
+	text-align: center;
+}
+
+li {
+	font-size: 20px;
+	text-decoration: none;
+	display: inline;
+	padding: 0px 10px;
+}
+
+nav {
+	background-image: url(../images/brickwall.png);
+	background-repeat: repeat;
+	position: relative;
+	width: 100%;
+}
+
+article {
+	color: white;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+footer p {
+	text-align: center;
+	font-family: Lato;
+}
+
+a {
+	color: #4cd964;
+	text-decoration: none;
+}
+
+#main-photo {
+	height: 180px;
+	border-color: white;
+	margin: 2em;
+	-webkit-border-top-left-radius: 100px;
+	-moz-border-top-left-radius: 100px;
+	border-top-left-radius: 100px;
+	-webkit-border-bottom-right-radius: 100px;
+	-moz-border-bottom-right-radius: 100px;
+	border-bottom-right-radius: 100px;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+}
+
+#left-header {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#right-header {
+	display: inline-block;
+	margin-top: 1em;
+	vertical-align: top;
+}
+
+#social-icons {
+	height: 2.5em;
+	top: 0;
+	position: relative;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+#social-icons:hover {
+	top: -0.3em;
+	position: relative;
+}
+
+#tagline {
+	font-size: 1.5em;
+	margin: 0 auto;
+}
+
+#nav-links {
+	margin: 0;
+}
+
+#nav-links li {
+	font-family: Oswald;
+	text-transform: uppercase;
+	padding-right: 1.5em;
+}
+
+.projects img {
+	width: 100%;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+}
+
+.projects div {
+	vertical-align: top;
+	display: inline-block;
+	padding: .7em;
+	width: 30%;	
+}
+
+.projects h2 {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.tech-skills h2 {
+	color: white;
+	font-size: 1.5em;
+	text-align: left;
+}
+
+.container {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+}
+
+@media (max-width: 600px){
+	h1 {
+		font-size: 30px;
+	}
+
+	ul {
+		display: block;
+		padding: 5px;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	#main-photo {
+		margin-top: 1em;
+	}
+
+	#tagline {
+	font-size: 1em;
+	}
+
+	#nav-links li {
+		display: block;
+	}
+
+	.experience div {
+		width: 100%;
+	}
+
+}
