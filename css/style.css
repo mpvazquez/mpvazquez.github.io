@@ -10,7 +10,6 @@ header {
 	background-image: url(../images/brickwall.png);
 	background-repeat: repeat;
 	text-align: center;
-	/*height: 248px;*/
 }
 
 h1 {
@@ -192,5 +191,9 @@ a {
 	.experience div {
 		width: 100%;
 	}
+
+	/*.fixed {
+		position: relative;
+	}*/
 
 }
