@@ -168,7 +168,6 @@ a {
 	}
 
 	ul {
-		display: block;
 		padding: 5px;
 	}
 
@@ -176,8 +175,13 @@ a {
 		text-align: left;
 	}
 
+	nav li {
+		padding-left: 15PX;
+	}
+
 	#main-photo {
 		margin-top: 1em;
+		margin-bottom: 0;
 	}
 
 	#tagline {
@@ -185,7 +189,7 @@ a {
 	}
 
 	#nav-links li {
-		display: block;
+		display: inline-block;
 	}
 
 	.experience div {
