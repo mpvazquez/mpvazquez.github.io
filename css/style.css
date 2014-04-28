@@ -162,6 +162,16 @@ a {
 	top: 0;
 }
 
+.bio {
+	display: inline-block;
+	width: 50%;
+}
+
+.tech-skills {
+	display: inline-block;
+	width: 40%;
+}
+
 @media (max-width: 600px){
 	h1 {
 		font-size: 30px;
