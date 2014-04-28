@@ -170,6 +170,7 @@ a {
 .tech-skills {
 	display: inline-block;
 	width: 40%;
+	float: right;
 }
 
 @media (max-width: 600px){
@@ -206,8 +207,14 @@ a {
 		width: 100%;
 	}
 
-	/*.fixed {
-		position: relative;
-	}*/
+	.bio {
+		display: block;
+		width: auto;
+	}
+
+	.tech-skills {
+		display: block;
+		width: auto;
+	}
 
 }
