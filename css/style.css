@@ -39,17 +39,8 @@ p {
 	font-family: Open Sans;
 }
 
-ul {
-	background-color: rgba(255, 255, 255, .5);
-	padding: 10px;
-	text-align: center;
-}
-
 li {
-	font-size: 1.3em;
-	text-decoration: none;
-	display: inline;
-	padding: 0px 10px;
+	font-family: Open Sans;
 }
 
 nav {
@@ -62,6 +53,10 @@ article {
 	color: white;
 	max-width: 800px;
 	margin: 0 auto;
+}
+
+table {
+	font-family: Open Sans;
 }
 
 footer p {
@@ -123,13 +118,29 @@ a {
 }
 
 #nav-links {
+	background-color: rgba(255, 255, 255, .5);
+	padding: .7em;
+	text-align: center;
 	margin: 0;
 }
 
 #nav-links li {
+	display: inline;
+	font-size: 1.3em;
 	font-family: Oswald;
 	text-transform: uppercase;
-	padding-right: 1.5em;
+	padding: 0 1.5em;
+	text-decoration: none;
+}
+
+.skills-rate {
+	width: 100%;
+}
+
+.skills-rate div {
+	background-color: #4cd964;
+	min-height: .6em;
+	margin: 0 .5em;
 }
 
 .project-list img {
@@ -146,7 +157,7 @@ a {
 	width: 30%;	
 }
 
-.tech-skills h2 {
+.about-me h2 {
 	color: white;
 	font-size: 1.4em;
 	text-align: left;
@@ -162,15 +173,41 @@ a {
 	top: 0;
 }
 
+.about-me article {
+	vertical-align: top;
+	padding-right: 1em;
+}
+
+.about-me li {
+	list-style-type: none;
+	text-indent: -2em;
+}
+
 .bio {
 	display: inline-block;
-	width: 50%;
+	width: 40%;
 }
 
 .tech-skills {
 	display: inline-block;
-	width: 40%;
-	float: right;
+	width: 30%;
+}
+
+.other-skills {
+	display: inline-block;
+	width: 20%;
+}
+
+.contact-icons {
+	background-color: rgba(255, 255, 255, .5);
+	padding: 10px;
+	text-align: center;
+}
+
+.contact-icons > li {
+	display: inline;
+	font-size: 1.3em;
+	padding: 0 .5em;
 }
 
 @media (max-width: 600px){
