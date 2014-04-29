@@ -23,6 +23,7 @@ h2 {
 	font-size: 2em;
 	text-transform: uppercase;
 	text-align: center;
+	margin-bottom: 0;
 }
 
 h3 {
@@ -74,11 +75,8 @@ table p {
 	text-indent: 0;
 	font-family: Lato;
 	color: #4cd964;
+	font-size: 1.2em;
 }
-
-/*table td {
-	text-indent: .5em;
-}*/
 
 #main-photo {
 	height: 180px;
