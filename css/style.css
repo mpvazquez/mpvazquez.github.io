@@ -23,14 +23,14 @@ h2 {
 	font-size: 2em;
 	text-transform: uppercase;
 	text-align: center;
-	margin-bottom: 0;
 }
 
 h3 {
 	font-family: Lato;
 	text-transform: uppercase;
-	text-align: center;
+	text-align: left;
 	font-size: 1.5em;
+	margin-bottom: 0;
 }
 
 p {
@@ -44,6 +44,11 @@ li {
 	font-family: Open Sans;
 }
 
+a {
+	color: #4cd964;
+	text-decoration: none;
+}
+
 nav {
 	background-image: url(../images/brickwall.png);
 	background-repeat: repeat;
@@ -52,22 +57,10 @@ nav {
 
 article {
 	color: white;
-	max-width: 800px;
-	margin: 0 auto;
 }
 
 table {
 	font-family: Open Sans;
-}
-
-a {
-	color: #4cd964;
-	text-decoration: none;
-}
-
-footer p {
-	text-align: center;
-	font-family: Lato;
 }
 
 table p {
@@ -77,6 +70,12 @@ table p {
 	color: #4cd964;
 	font-size: 1.2em;
 	text-transform: uppercase;
+	margin-top: .5em;
+}
+
+footer p {
+	text-align: center;
+	font-family: Lato;
 }
 
 #main-photo {
@@ -163,14 +162,14 @@ table p {
 .project-list div {
 	vertical-align: top;
 	display: inline-block;
-	padding: .7em;
-	width: 30%;	
+	padding: 0 1em;
+	width: 29%;	
 }
 
-.about-me h2 {
+.about-me h3 {
 	color: white;
-	font-size: 1.4em;
-	text-align: left;
+	font-size: 1.5em;
+	margin-top: 0;
 }
 
 .container {
@@ -185,7 +184,7 @@ table p {
 
 .about-me article {
 	vertical-align: top;
-	padding-right: 2em;
+	padding: 0 1em;
 }
 
 .about-me li {
@@ -195,7 +194,7 @@ table p {
 
 .bio {
 	display: inline-block;
-	width: 38%;
+	width: 37%;
 }
 
 .tech-skills {
@@ -205,7 +204,7 @@ table p {
 
 .other-skills {
 	display: inline-block;
-	width: 22%;
+	width: 25%;
 }
 
 .contact-icons {
@@ -219,6 +218,8 @@ table p {
 	font-size: 1.3em;
 	padding: 0 .5em;
 }
+
+/*Start Responsive Design*/
 
 @media (max-width: 600px){
 	h1 {
