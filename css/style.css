@@ -76,6 +76,7 @@ table p {
 	font-family: Lato;
 	color: #4cd964;
 	font-size: 1.2em;
+	text-transform: uppercase;
 }
 
 #main-photo {
@@ -249,16 +250,12 @@ table p {
 		display: inline-block;
 	}
 
-	.experience div {
-		width: 100%;
-	}
-
-	.bio {
+	.project-list > div {
 		display: block;
 		width: auto;
 	}
 
-	.tech-skills {
+	.about-me > article {
 		display: block;
 		width: auto;
 	}
