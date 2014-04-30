@@ -142,6 +142,10 @@ footer p {
 	text-decoration: none;
 }
 
+#nav-links a:hover {
+	color: #80F20D;
+}
+
 .skills-rate {
 	width: 100%;
 }
