@@ -156,6 +156,10 @@ footer p {
 	margin: 0 .5em;
 }
 
+.skills-rate div:hover {
+	background-color: #4ce964;
+}
+
 .project-list img {
 	width: 100%;
 	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
