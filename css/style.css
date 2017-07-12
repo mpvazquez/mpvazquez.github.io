@@ -228,17 +228,13 @@ footer p {
 
 /*Start Responsive Design*/
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 	h1 {
 		font-size: 30px;
 	}
 
 	ul {
 		padding: 5px;
-	}
-
-	p {
-		text-align: left;
 	}
 
 	nav li {
