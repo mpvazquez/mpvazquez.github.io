@@ -1,0 +1,593 @@
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Archivo+Narrow);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,  pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    5px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         5px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
+div.page-wrapper {
+  background-color: white;
+}
+
+/* website header */
+header {
+  top: 0px;
+  font-family: Quicksand;
+}
+
+/* start nav bar */
+nav {
+  width: 100%;
+  z-index: 300;
+  height: 2.8em;
+  text-align: right;
+  font-family: Quicksand;
+  background-color: white;
+  background: rgb(255, 240, 255);
+  background: -moz-linear-gradient(90deg, #FCFCFC 10%, #F0F0F0 90%);
+  background: -webkit-linear-gradient(90deg, #FCFCFC 10%, #F0F0F0 90%);
+  background: -o-linear-gradient(90deg, #FCFCFC 10%, #F0F0F0 90%);
+  background: -ms-linear-gradient(90deg, #FCFCFC 10%, #F0F0F0 90%);
+  background: linear-gradient(180deg, #FCFCFC 10%, #F0F0F0 90%);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+}
+nav h1 {
+  float: left;
+  display: inline;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-left: 10%;
+  padding-top: .37em;
+  text-transform: uppercase;
+}
+nav h1 a {
+  text-decoration: none;
+  color: black;
+}
+nav ul#main-nav {
+  display: inline-block;
+  padding-right: 10%;
+  margin-top: .5em;
+}
+nav ul#main-nav a {
+  text-decoration: none;
+  color: grey;
+}
+nav ul#hamburger {
+  background-size: cover;
+  margin-right: 10%; 
+  margin-top: .75em;
+  display: none;
+  height: 1.3em;
+  width: 1.3em;
+}
+nav li {
+  display: inline-block;
+  padding-left: 2.5em;
+  font-size: 1.5em;
+}
+/* end nav bar */
+
+
+/* Start hidden slider menu and content layer */
+ul.slider-menu {
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  z-index: -300;
+  position: fixed;
+  background: #8e8e93;
+  background: -webkit-linear-gradient(90deg, #3e3c3d 0%,#2d2c2d 100%);
+  background: -moz-linear-gradient(90deg, #3e3c3d 0%,#2d2c2d 100%);
+  background: -ms-linear-gradient(90deg, #3e3c3d 0%,#2d2c2d 100%);
+  background: -o-linear-gradient(90deg, #3e3c3d 0%,#2d2c2d 100%);
+  background: linear-gradient(180deg, #3e3c3d 0%,#2d2c2d 100%);
+}
+ul.slider-menu li {
+  border-bottom: 1px solid #222222;
+  border-top: 1px solid #444444;
+  list-style-type: none;
+  padding: 1em;
+  width: 100%;
+}
+ul.slider-menu a {
+  text-decoration: none;
+  padding-left: 0;
+  font-size: 1.5em;
+  color: white;
+}
+div.content-layer {
+  position: absolute;
+  /*overflow-x: hidden;
+  overflow-y: auto;*/
+  display: none;
+  z-index: 400;
+  height: 100%;
+  width: 30%;
+  right: 0;
+  top: 0;
+}
+/* End hidden slider menu and content layer */
+
+/* start main 'Joe Redman' headline that fades out */
+div.headline {
+  height: 100%;
+  background-color: #939EA8;
+}
+div.headline h1 {
+  color: rgba(255,255,255,.8);
+  font-family: Archivo Narrow;
+  text-align: center;
+  padding-top: 20%;
+  font-size: 10em;
+  margin: 0;
+}
+
+/* start hero image and latest news */
+div.hero {
+  background-image: url(../images/joe-redman-04.jpg);
+  background-repeat: no-repeat;
+  background-size: 85em auto;
+  background-position: left;
+  position: relative;
+  height: 43em;
+  width: 100%;
+}
+div.latest-news {
+  background-color: rgba(255, 255, 255, .8);
+  text-align: justify;
+  position: absolute;
+  max-width: 20em;
+  padding: 1.5em;
+  left: 10%;
+  top: 15%;
+}
+div.latest-news h2 {
+  margin: 0 auto;
+  font-size: 2.5em;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+div.latest-news ul {
+  padding-left:0;
+}
+div.latest-news ol {
+  list-style-type: none;
+  margin-bottom: 1.5em;
+  font-family: Roboto;
+  padding-left: 1em;
+}
+div.latest-news li:first-child {
+  list-style-type: square;
+}
+div.latest-news a {
+  text-decoration: none;
+}
+div.latest-news .updates {
+  display: inline-block;
+  width: 100%;
+}
+div.joe-redman {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+}
+div.joe-redman h1 {
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, .6);
+  font-weight: 400;
+  font-size: 3.5em;
+}
+/* end header */
+
+/* image carousel */
+#carousel {
+  background-color: rgba(0, 0, 0, .02);
+  position: relative;
+  height: 30em;
+}
+#carousel ul,  
+#carousel li {  
+  list-style: none;
+  list-style-type: none;
+}
+#carousel ul {
+  position: relative;
+}
+#carousel li {
+  top: 5em;
+  width: 30%;
+  height: 18em;
+  overflow: hidden;
+  position: absolute;
+  display: inline-block;
+  background-size: contain;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+#carousel img.portrait {
+  width: 100%;
+}
+#carousel img.landscape {
+  height: 100%;
+  margin-left: -4.5em;
+}
+#carousel img.landscape-left {
+  height: 100%;
+}
+#carousel .left-position {
+  z-index: 100;
+  opacity: .65;
+  left: 2.5%;
+}
+#carousel .right-position {
+  z-index: 100;
+  opacity: .65;
+  left: 67.5%;
+}
+#carousel .center-position {
+  left: 35%;
+  z-index: 200;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  transform: scale(1.5);
+}
+#carousel .back-position {
+  left: 35%;
+  opacity: 0;
+  z-index: -100;
+  -webkit-transform: scale(.3);
+  -moz-transform: scale(.3);
+  transform: scale(.3);
+}
+#carousel .center-position p {
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  color: white;
+  padding: 1em 0;
+  font-size: .7em;
+  text-align: center;
+  position: absolute;
+  font-family: Quicksand;
+  background-color: rgba(0, 0, 0, .4);
+}
+#video-carousel {
+  height: 0;
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 35px;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+#video-carousel li {
+  top:0;
+  width: 100%;
+  height: 100%;
+}
+#video-carousel iframe {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 75%;
+}
+#carousel-item-description {
+  left: 12%;
+  width: 75%;
+  top: 25.3em;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  vertical-align: top;
+}
+/* carousel arrows */
+/* logos are stored in logos.css */
+#arrow-left,
+#arrow-right {
+  width: 7em;
+  height: 7em;
+  position: absolute;
+}
+#arrow-right {
+  bottom: -14px;
+  right: -2.8em;
+}
+#arrow-left {
+  bottom: 0;
+  left: -2.8em;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#arrow-right:hover {
+  right: -3.3em;
+}
+#arrow-left:hover {
+  left: -3.3em;
+}
+#about-right,
+#about-left {
+  display: inline-block;
+  line-height: 1.8em;
+  width: 48%;
+}
+#about-right {
+  float: right;
+}
+
+/* Contact section */
+div.contact-hero {
+  background-image: url(../images/joe-redman-08.jpg);
+  background-size: cover;
+  position: relative;
+  margin-right: 0;
+  height: 40em;
+  width: 100%;
+  z-index: 0;
+}
+div.contact-info {
+  top: 15%;
+  left: 8%;
+  position: absolute;
+}
+div.contact-info ul,
+div.contact-info ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  font-family: Quicksand;
+}
+div.contact-info li {
+  width: 7em;
+  display: inline-block;
+  vertical-align: middle;
+}
+div.contact-info a {
+  text-decoration: none;
+  color: black;
+}
+.contact-link {
+  font-size: 1.5em;
+}
+#phone-link {
+  margin-top: -1.5em;
+  padding-left: 7.2em;
+  display: block;
+  width: 13em;
+}
+
+/* contact logos */
+/* logos are stored in logos.css */
+.logos {
+  width: 1em;
+  height: 4.8em;
+  margin-left: 0;
+  -webkit-transform: scale(.6);
+  -moz-transform: scale(.6);
+  transform: scale(.6);
+}
+
+/* content wrapper and other class methods */
+.content-wrapper > section {
+  text-align: justify;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.credits h2,
+.contact h2,
+.content-wrapper h2 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-family: Quicksand;
+  text-align: center;
+  margin: 1.5em auto;
+  font-weight: 400;
+}
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+}
+.contact h2 {
+  margin-left: 10%;
+}
+
+/* credits section for website */
+section.credits {
+  padding: 0;
+  margin: 0 10%;
+  font-family: Roboto;
+  text-align: justify;
+}
+section.credits li,
+section.credits ul {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 40em;
+}
+section.credits h2 {
+  margin-bottom: 2em;
+}
+section.credits ul {
+  margin-bottom: 2em;
+  line-height: 1.6em;
+  list-style-type: square;
+}
+.credits .credit-title {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: .5em;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+/* footer */
+footer {
+  font-family: Quicksand;
+  text-align: center;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.75);
+}
+footer a {
+  color: gray;
+  text-decoration: none;
+}
+footer li {
+  margin: 0 auto;
+  padding: 1.5em;
+  display: inline-block;
+}
+section.credits {
+  margin-bottom: 0;
+  padding-bottom: 2em;
+}
+
+/* Mobile/Responsive-ready media queries */
+
+@media (max-width: 1150px) {
+  nav li {
+    font-size: 1.2em;
+    padding-left: 1em;
+    padding-top: .1em;
+  }
+  nav h1 {
+    padding-top: .35em;
+  }
+  div.headline h1 {
+    padding-top: 25%;
+  }
+  div.joe-redman {
+    left: 10%;
+  }
+  div.contact-hero {
+    background-position: right;
+  }
+  div.contact-info ul {
+    background-color: rgba(255, 255, 255, .5);
+    padding: 1.5em;
+  }
+  footer li:not(#credits) {
+    display: none;
+  }
+  #video-carousel {
+    padding-bottom: 65%;
+  }
+  #video-carousel iframe {
+    height: 100%;
+  }
+  .videos #carousel {
+    height: 20em;
+    padding-bottom: 10em;
+  }
+}
+
+@media (max-width: 800px) {
+  nav li {
+    display: none;
+  }
+  nav ul#hamburger {
+    display: inline-block;
+  }
+  div.hero {
+    background-position: center; 
+  }
+  div.joe-redman {
+    display: none;
+  }
+  div.headline h1 {
+    font-size: 8em;
+    padding-top: 35%;
+  }
+  div.latest-news {
+    left: 0;
+    top: 47%;
+    bottom: 0;
+    padding: 0;
+    min-width: 100%;
+    text-align: center;
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, .2) 10%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .2) 90%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, .2) 10%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .2) 90%);
+    background: -o-linear-gradient(90deg, rgba(255, 255, 255, .2) 10%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .2) 90%);
+    background: -ms-linear-gradient(90deg, rgba(255, 255, 255, .2) 10%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .2) 90%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, .2) 10%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .2) 90%);
+  }
+  div.latest-news ol {
+    padding: 0;
+  }
+  div.latest-news li:first-child {
+    list-style-type: none;
+  }
+  div.latest-news h2 {
+    font-size: 2em;
+  }
+  #about-right,
+  #about-left {
+    width: 100%;
+  }
+  #video-carousel iframe {
+    height: 15em;
+  }
+  .videos #carousel {
+    height: 10em;
+    padding-bottom: 5em;
+  }
+  #carousel li {
+    top: 0;
+    width: 100%;
+    height: 24em;
+  }
+  #carousel .center-position {
+    left: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  #carousel .background-position,
+  #carousel .left-position,
+  #carousel .right-position {
+    left: 0;
+    -webkit-transform: scale(.3);
+    -moz-transform: scale(.3);
+    transform: scale(.3);
+  }
+  #carousel img.landscape {
+    margin-left: 0;
+  }
+}
+@media (max-width: 650px) {
+  div.hero {
+    height: 568px;
+    background-size: cover; 
+    background-image: url(../images/mobile-bg/joe-redman-mobile-01.jpg);
+  }
+  div.contact-hero {
+    height: 568px;
+    background-size: cover;
+    background-image: url(../images/mobile-bg/joe-redman-mobile-02.jpg);
+  }
+  div.headline h1 {
+    font-size: 6em;
+  }
+  #carousel img.landscape {
+    margin-left: -11em;
+  }
+}
