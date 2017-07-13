@@ -227,6 +227,11 @@ footer p {
 }
 
 /*Start Responsive Design*/
+@media (max-width: 1050px) {
+	.project-list > div {
+		padding: 0 .7em;
+	}
+}
 
 @media (max-width: 800px){
 	h1 {
