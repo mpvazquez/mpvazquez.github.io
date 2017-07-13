@@ -10,29 +10,41 @@ $(document).ready(function() {
       if (target.length) {
         $('html,body').animate({
           scrollTop: target.offset().top - 20
-        }, "slow");
+        }, 'slow');
         return false;
       }
     }
   }
 
   function setStickyHeader() {
-    var headerHeight = $('header').outerHeight();
-    
-    $window.scroll(function() {
-      if ( $window.scrollTop() > headerHeight ) {
-        $nav.addClass('fixed').css('top','0').next()
-        .css('padding-top','50px');   
-      } else {
-        $nav.removeClass('fixed').next()
+    function removeFixedClass() {
+      $nav.removeClass('fixed').next()
         .css('padding-top','0');
-      }
-    });
+    }
+
+    if($window.width() > 600) {
+      var headerHeight = $('header').outerHeight();
+
+      $window.scroll(function() {
+        if ( $window.scrollTop() > headerHeight ) {
+          $nav.addClass('fixed')
+            .css('top','0').next()
+            .css('padding-top','50px');  
+        } else {
+          removeFixedClass();
+        }
+      });
+    } else {
+      $window.off('scroll');
+      removeFixedClass();
+    }
   }
 
   setStickyHeader();
 
-  $window.resize(setStickyHeader);
+  $window.resize(function() {
+    setStickyHeader();
+  });
 
   $('a[href*=#]:not([href=#])').click(setDynamicAnchors);
 });
