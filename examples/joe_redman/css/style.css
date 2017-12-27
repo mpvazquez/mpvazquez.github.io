@@ -296,8 +296,8 @@ div.joe-redman h1 {
 }
 /* carousel arrows */
 /* logos are stored in logos.css */
-#arrow-left,
-#arrow-right {
+.carousel-arrow {
+  cursor: pointer;
   width: 7em;
   height: 7em;
   position: absolute;
@@ -474,9 +474,6 @@ section.credits {
   }
   div.headline h1 {
     padding-top: 25%;
-  }
-  div.joe-redman {
-    left: 10%;
   }
   div.contact-hero {
     background-position: right;
