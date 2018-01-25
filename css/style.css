@@ -78,32 +78,7 @@ footer p {
 	font-family: Lato;
 }
 
-#main-photo {
-	height: 180px;
-	margin: 2em;
-	-webkit-border-top-left-radius: 100px;
-	-moz-border-top-left-radius: 100px;
-	border-top-left-radius: 100px;
-	-webkit-border-bottom-right-radius: 100px;
-	-moz-border-bottom-right-radius: 100px;
-	border-bottom-right-radius: 100px;
-	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-}
-
-#left-header {
-	display: inline-block;
-	vertical-align: top;
-}
-
-#right-header {
-	display: inline-block;
-	vertical-align: top;
-	margin-top: 1em;
-}
-
-#social-icons {
+.social-icons {
 	height: 2.5em;
 	top: 0;
 	position: relative;
@@ -112,37 +87,12 @@ footer p {
 	transition: all 0.2s ease-in-out;
 }
 
-#social-icons:hover {
+.social-icons:hover {
 	top: -0.3em;
 	position: relative;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 	border-radius: 100px;
-}
-
-#tagline {
-	font-size: 1.4em;
-	margin: 0 auto;
-}
-
-#nav-links {
-	background-color: rgba(255, 255, 255, .5);
-	padding: .5em;
-	text-align: center;
-	margin: 0;
-}
-
-#nav-links li {
-	display: inline;
-	font-size: 1.3em;
-	font-family: Oswald;
-	text-transform: uppercase;
-	padding: 0 1.5em;
-	text-decoration: none;
-}
-
-#nav-links a:hover {
-	color: #80F20D;
 }
 
 .skills-rate {
@@ -227,6 +177,56 @@ footer p {
 	padding: 0 .5em;
 }
 
+#header-left {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#header-right {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 1em;
+}
+
+#main-photo {
+	height: 180px;
+	margin: 2em;
+	-webkit-border-top-left-radius: 100px;
+	-moz-border-top-left-radius: 100px;
+	border-top-left-radius: 100px;
+	-webkit-border-bottom-right-radius: 100px;
+	-moz-border-bottom-right-radius: 100px;
+	border-bottom-right-radius: 100px;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+}
+
+#nav-links {
+	background-color: rgba(255, 255, 255, .5);
+	padding: .5em;
+	text-align: center;
+	margin: 0;
+}
+
+#nav-links a:hover {
+	color: #80F20D;
+}
+
+#nav-links li {
+	display: inline;
+	font-size: 1.3em;
+	font-family: Oswald;
+	text-transform: uppercase;
+	padding: 0 1.5em;
+	text-decoration: none;
+}
+
+#tagline {
+	font-size: 1.4em;
+	margin: 0 auto;
+}
+
 /*Start Responsive Design*/
 @media (max-width: 1050px) {
 	.project-list > div {
@@ -253,7 +253,7 @@ footer p {
 	}
 
 	#tagline {
-	font-size: 1em;
+		font-size: 1em;
 	}
 
 	#nav-links li {
