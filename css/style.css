@@ -209,17 +209,17 @@ footer p {
 	margin: 0;
 }
 
-#nav-links a:hover {
-	color: #80F20D;
-}
-
-#nav-links li {
+#nav-links > li {
 	display: inline;
 	font-size: 1.3em;
 	font-family: Oswald;
 	text-transform: uppercase;
 	padding: 0 1.5em;
 	text-decoration: none;
+}
+
+#nav-links > li > a:hover {
+	color: #80F20D;
 }
 
 #tagline {
