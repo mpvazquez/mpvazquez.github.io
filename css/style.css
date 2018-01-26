@@ -87,15 +87,19 @@ table p {
 	top: 0;
 }
 
+.mobile-hide {
+	display: inline-block;
+}
+
+.mobile-show {
+	display: none;
+}
+
 .project-image {
 	width: 100%;
 	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.3);
 	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-}
-
-.rwd-break {
-	display: none;
 }
 
 .social-icons {
@@ -131,7 +135,6 @@ table p {
 
 #about-me > article {
 	vertical-align: top;
-	/*padding: 0 1em;*/
 }
 
 #about-me h3 {
@@ -148,6 +151,7 @@ table p {
 #footer-text {
 	text-align: center;
 	font-family: Lato;
+	padding: 1rem;
 }
 
 #header {
@@ -242,17 +246,37 @@ table p {
 		padding: 5px;
 	}
 
+	.contact-icons {
+		padding: .5rem 0;
+	}
+
+	.contact-icons > li {
+		padding: 0 .3em;
+	}
+
 	.container {
 		margin: 0 5%;
 	}
 
-	.rwd-break {
-		display: block;
+	.mobile-hide {
+		display: none;
+	}
+
+	.mobile-show {
+		display: inline-block;
 	}
 
 	#about-me > article {
 		display: block;
 		width: auto;
+	}
+
+	#contact > .contact-icons {
+		background-color: rgba(0,0,0,0);;
+	}
+
+	#contact > .contact-icons > li {
+		filter: invert(.8);
 	}
 
 	#main-photo {
@@ -267,7 +291,8 @@ table p {
 
 	#nav-links li {
 		display: inline-block;
-		padding: 0 1em;
+	    font-size: 1rem;
+		padding: 0 .6rem;
 	}
 
 	#project-list > article {
@@ -283,9 +308,5 @@ table p {
 	#project-list p {
 		margin: 0;
 		padding: 1rem;
-	}
-
-	#tagline {
-		font-size: 1em;
 	}
 }
