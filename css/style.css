@@ -277,6 +277,7 @@ table p {
 
 	#contact > .contact-icons > li {
 		filter: invert(.8);
+		-webkit-filter: invert(.8);
 	}
 
 	#main-photo {
