@@ -259,7 +259,7 @@ table p {
 	}
 
 	.mobile-show {
-		display: inline-block;
+		display: block;
 	}
 
 	.social-icons:hover {
