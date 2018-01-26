@@ -272,12 +272,12 @@ table p {
 	}
 
 	#contact > .contact-icons {
-		background-color: rgba(0,0,0,0);;
+		background-color: rgba(0, 0, 0, 0);;
 	}
 
 	#contact > .contact-icons > li {
-		filter: invert(.8);
 		-webkit-filter: invert(.8);
+		filter: invert(.8);
 	}
 
 	#main-photo {
@@ -297,7 +297,7 @@ table p {
 	}
 
 	#project-list > article {
-		background-color: rgba(250,250,250,.3);
+		background-color: rgba(250, 250, 250, .1);
 		display: block;
 		width: auto;
 	}
