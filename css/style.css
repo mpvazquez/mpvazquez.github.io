@@ -77,7 +77,7 @@ table {
 	background-color: rgba(255, 255, 255, .5);
 	display: flex;
 	justify-content: space-evenly;
-	padding: .5rem 0;
+	padding: .7rem 0;
 }
 
 .contact-icons > li {
@@ -181,7 +181,7 @@ table {
 }
 
 #contact > .contact-icons {
-	padding: .5rem 25%;
+	padding: .7rem 25%;
 }
 
 #footer-text {
@@ -303,7 +303,6 @@ table {
 
 	#contact > .contact-icons {
 		background-color: rgba(0, 0, 0, 0);
-		padding: .5rem 0;
 	}
 
 	#contact > .contact-icons > li {
