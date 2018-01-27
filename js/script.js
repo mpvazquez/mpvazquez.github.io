@@ -33,10 +33,10 @@
 
             if (window.scrollY > headerHeight) {
                 navBar.classList.add('fixed');
-                topSection.classList.add('padding-top-50');
+                topSection.classList.add('padding-top-40');
             } else {
                 navBar.classList.remove('fixed');
-                topSection.classList.remove('padding-top-50');
+                topSection.classList.remove('padding-top-40');
             }
         });
     };
