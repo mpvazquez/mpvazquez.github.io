@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
-@import url(http://fonts.googleapis.com/css?family=Lato:100);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 a {
@@ -30,6 +30,7 @@ h3,
 h4 {
 	font-family: Lato;
 	text-transform: uppercase;
+	font-weight: 300;
 }
 
 h2 {
@@ -187,6 +188,7 @@ table {
 	color: #FFFFFF;
 	text-align: center;
 	font-family: Lato;
+	font-weight: 100;
 	padding: 1rem;
 }
 
