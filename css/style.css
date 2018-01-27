@@ -152,6 +152,12 @@ table {
 
 /* ID Selectors */
 
+#about-me {
+	align-items: flex-start;
+	display: flex;
+	justify-content: space-between;
+}
+
 #about-me > article {
 	vertical-align: top;
 }
@@ -162,8 +168,7 @@ table {
 }
 
 #bio {
-	display: inline-block;
-	width: 34%;
+	flex-basis: 35%;
 }
 
 #contact > .contact-icons-container {
@@ -209,10 +214,6 @@ table {
 	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.3);
 }
 
-#more-gifs {
-	margin: 0 2.5%;
-}
-
 #nav-bar {
 	background-image: url(../images/brickwall.png);
 	background-repeat: repeat;
@@ -228,14 +229,20 @@ table {
 }
 
 #other-skills {
-	display: inline-block;
-	width: 28.5%;
+	flex-basis: 29%;
+}
+
+#project-list {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 #project-list > article {
 	vertical-align: top;
 	display: inline-block;
-	width: 31%;
+	flex-basis: 32%;
 }
 
 #tagline {
@@ -248,14 +255,12 @@ table {
 }
 
 #tech-skills {
-	margin: 0 2.5%;
-	display: inline-block;
-	width: 31%;
+	flex-basis: 32%;
 }
 
 /*Start Responsive Design*/
 
-@media (max-width: 800px){
+@media (max-width: 768px){
 	h1 {
 		font-size: 2.1rem;
 	}
@@ -285,6 +290,11 @@ table {
 		top: 0;
 	}
 
+	#about-me,
+	#project-list {
+		flex-direction: column;
+	}
+
 	#about-me > article {
 		display: block;
 		width: auto;
@@ -308,7 +318,7 @@ table {
 
 	#more-gifs,
 	#tech-skills {
-		margin: 3rem 0;
+		margin: 2rem 0;
 	}
 
 	#nav-links {
