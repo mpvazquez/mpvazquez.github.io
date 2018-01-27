@@ -136,14 +136,14 @@ table {
 	height: 2.5em;
 	top: 0;
 	position: relative;
-	-moz-transition: all 0.2s ease-in-out;
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	-moz-transition: top 0.3s ease-in;
+	-webkit-transition: top 0.3s ease-in;
+	transition: top 0.3s ease-in;
 	vertical-align: middle;
 }
 
 .social-icons:hover {
-	top: -0.4em;
+	top: -0.5em;
 }
 
 .skills-name {
@@ -262,7 +262,7 @@ table {
 
 @media (max-width: 800px){
 	h1 {
-		font-size: 30px;
+		font-size: 2em;
 	}
 
 	.container {
@@ -298,6 +298,8 @@ table {
 
 	#contact > .contact-icons {
 		background-color: rgba(0, 0, 0, 0);
+		justify-content: space-between;
+		padding: 0 0 .7rem 0;
 	}
 
 	#contact > .contact-icons > li {
@@ -316,7 +318,7 @@ table {
 	}
 
 	#nav-links {
-		padding: .5rem;
+		padding: .5rem 5%;
 	}
 
 	#project-list > article {
@@ -332,5 +334,9 @@ table {
 	#project-list p {
 		margin: 0;
 		padding: 1rem;
+	}
+
+	#tagline {
+		font-size: 1.5em;
 	}
 }
