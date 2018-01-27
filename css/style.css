@@ -76,14 +76,13 @@ table {
 .contact-icons {
 	background-color: rgba(255, 255, 255, .5);
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	padding: .7rem 0;
 }
 
 .contact-icons > li {
 	display: inline;
 	font-size: 1.3em;
-	padding: 0 .5em;
 }
 
 .container {
@@ -264,10 +263,6 @@ table {
 @media (max-width: 800px){
 	h1 {
 		font-size: 30px;
-	}
-
-	.contact-icons > li {
-		padding: 0 .3em;
 	}
 
 	.container {
