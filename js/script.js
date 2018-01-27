@@ -30,13 +30,14 @@
 
         window.addEventListener('scroll', function() {
             var headerHeight = document.getElementById('header').offsetHeight;
+            var navBarHeight = document.getElementById('nav-links').offsetHeight;
 
             if (window.scrollY > headerHeight) {
                 navBar.classList.add('fixed');
-                topSection.classList.add('padding-top-40');
+                topSection.style.paddingTop = navBarHeight + 'px';
             } else {
                 navBar.classList.remove('fixed');
-                topSection.classList.remove('padding-top-40');
+                topSection.style.paddingTop = 0;
             }
         });
     };
