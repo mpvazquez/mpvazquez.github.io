@@ -60,7 +60,6 @@ nav {
 }
 
 p {
-	color: #FFFFFF;	
 	font-family: Open Sans;
 	font-size: 1em;
 	text-align: justify;
@@ -100,7 +99,7 @@ table {
 }
 
 .nav-link {
-	display: inline;
+	display: inline-block;
 	font-family: Oswald;
 	font-size: 1.3em;
 	letter-spacing: 1px;
@@ -120,6 +119,10 @@ table {
     position: absolute;
     bottom: -8px;
     background: #80F20D;
+}
+
+.padding-top-50 {
+	padding-top: 50px;
 }
 
 .project-image {
@@ -181,6 +184,7 @@ table {
 }
 
 #footer-text {
+	color: #FFFFFF;
 	text-align: center;
 	font-family: Lato;
 	padding: 1rem;
@@ -276,7 +280,6 @@ table {
 	}
 
 	.nav-link {
-		display: inline-block;
 	    font-size: 1rem;
 	}
 
