@@ -28,25 +28,17 @@
         var navBar = document.getElementById('nav-bar');
         var topSection = document.getElementById('top-section');
 
-        function removeStickyHeader() {
-            navBar.classList.remove('fixed');
-            topSection.classList.remove('padding-top-50');
-        }
+        window.addEventListener('scroll', function() {
+            var headerHeight = document.getElementById('header').offsetHeight;
 
-        if(window.innerWidth > 600) {
-            window.addEventListener('scroll', function() {
-                var headerHeight = document.getElementById('header').offsetHeight;
-
-                if (window.scrollY > headerHeight) {
-                    navBar.classList.add('fixed');
-                    topSection.classList.add('padding-top-50');
-                } else {
-                    removeStickyHeader();
-                }
-            });
-        } else {
-            window.removeEventListener('scroll', removeStickyHeader);
-        }
+            if (window.scrollY > headerHeight) {
+                navBar.classList.add('fixed');
+                topSection.classList.add('padding-top-50');
+            } else {
+                navBar.classList.remove('fixed');
+                topSection.classList.remove('padding-top-50');
+            }
+        });
     };
 
     window.addEventListener('DOMContentLoaded', loadPage);
