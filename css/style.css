@@ -158,10 +158,6 @@ table {
 	justify-content: space-between;
 }
 
-#about-me > article {
-	vertical-align: top;
-}
-
 #about-me > article > h3 {
 	font-size: 1.5em;
 	margin-top: 0;
@@ -240,8 +236,6 @@ table {
 }
 
 #project-list > article {
-	vertical-align: top;
-	display: inline-block;
 	flex-basis: 32%;
 }
 
