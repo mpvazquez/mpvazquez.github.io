@@ -3,19 +3,16 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 a {
-	color: #4cd964;
+	color: #4CD964;
 	text-decoration: none;
 }
 
-a,
-a:hover,
-a:active,
 a:focus {
 	outline: none;
 }
 
 article {
-	color: white;
+	color: #FFFFFF;
 }
 
 body {
@@ -47,7 +44,7 @@ h3 {
 }
 
 h4 {
-	color: #4cd964;
+	color: #4CD964;
 	font-size: 1.2em;
 	margin: .5em 0 0 0;
 }
@@ -63,7 +60,7 @@ nav {
 }
 
 p {
-	color: white;	
+	color: #FFFFFF;	
 	font-family: Open Sans;
 	font-size: 1em;
 	text-align: justify;
@@ -156,12 +153,12 @@ table {
 }
 
 .skills-score > div {
-	background-color: #4cd964;
+	background-color: #4CD964;
 	min-height: .6em;
 }
 
 .skills-score > div:hover {
-	background-color: #4ce964;
+	background-color: #4CE964;
 }
 
 #about-me > article {
@@ -169,7 +166,7 @@ table {
 }
 
 #about-me > article > h3 {
-	color: white;
+	color: #FFFFFF;
 	font-size: 1.5em;
 	margin-top: 0;
 }
@@ -262,7 +259,7 @@ table {
 
 @media (max-width: 800px){
 	h1 {
-		font-size: 2em;
+		font-size: 2.3em;
 	}
 
 	.container {
