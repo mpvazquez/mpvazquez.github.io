@@ -68,13 +68,6 @@ table {
 	margin: 0 10%;
 }
 
-.copy {
-	color: #FFFFFF;
-	font-family: Open Sans;
-	font-size: 1em;
-	text-align: justify;
-}
-
 .fixed {
 	position: fixed;
 	top: 0;
@@ -92,7 +85,7 @@ table {
 	display: inline-block;
 	font-family: Oswald;
 	font-size: 1.3em;
-	letter-spacing: 1px;
+	letter-spacing: .5px;
 	position: relative;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -109,6 +102,13 @@ table {
     position: absolute;
     bottom: -8px;
     background: #80F20D;
+}
+
+.paragraphs {
+	color: #FFFFFF;
+	font-family: Open Sans;
+	font-size: 1em;
+	text-align: justify;
 }
 
 .project-image {
@@ -223,7 +223,7 @@ table {
 	background-color: rgba(255, 255, 255, .5);
 	display: flex;
 	justify-content: space-between;
-	padding: .5em 10%;
+	padding: .5rem 10%;
 	margin: 0;
 }
 
