@@ -11,10 +11,6 @@ a:focus {
 	outline: none;
 }
 
-article {
-	color: #FFFFFF;
-}
-
 body {
 	background-color: rgba(0, 0, 0, .7);
 }
@@ -29,8 +25,8 @@ h2,
 h3,
 h4 {
 	font-family: Lato;
-	text-transform: uppercase;
 	font-weight: 300;
+	text-transform: uppercase;
 }
 
 h2 {
@@ -39,10 +35,10 @@ h2 {
 }
 
 h3 {
+	color: #FFFFFF;
 	font-size: 1.5em;
 	font-weight: 100;
 	margin-bottom: 0;
-	text-align: left;
 }
 
 h4 {
@@ -51,40 +47,32 @@ h4 {
 	margin: .5em 0 0 0;
 }
 
-li {
-	font-family: Open Sans;
-}
-
-nav {
-	background-image: url(../images/brickwall.png);
-	background-repeat: repeat;
-	width: 100%;
-}
-
-p {
-	font-family: Open Sans;
-	font-size: 1em;
-	text-align: justify;
-}
-
 table {
+	color: #FFFFFF;
 	font-family: Open Sans;
 }
 
-.contact-icons {
+.contact-icons-container {
 	background-color: rgba(255, 255, 255, .5);
 	display: flex;
 	justify-content: space-around;
 	padding: .7rem 0;
 }
 
-.contact-icons > li {
+.contact-icons-container > li {
 	display: inline;
 	font-size: 1.3em;
 }
 
 .container {
 	margin: 0 10%;
+}
+
+.copy {
+	color: #FFFFFF;
+	font-family: Open Sans;
+	font-size: 1em;
+	text-align: justify;
 }
 
 .fixed {
@@ -162,12 +150,13 @@ table {
 	background-color: #4CE964;
 }
 
+/* ID Selectors */
+
 #about-me > article {
 	vertical-align: top;
 }
 
 #about-me > article > h3 {
-	color: #FFFFFF;
 	font-size: 1.5em;
 	margin-top: 0;
 }
@@ -177,7 +166,7 @@ table {
 	width: 34%;
 }
 
-#contact > .contact-icons {
+#contact > .contact-icons-container {
 	padding: .7rem 25%;
 }
 
@@ -222,6 +211,12 @@ table {
 
 #more-gifs {
 	margin: 0 2.5%;
+}
+
+#nav-bar {
+	background-image: url(../images/brickwall.png);
+	background-repeat: repeat;
+	width: 100%;
 }
 
 #nav-links {
@@ -295,13 +290,13 @@ table {
 		width: auto;
 	}
 
-	#contact > .contact-icons {
+	#contact > .contact-icons-container {
 		background-color: rgba(0, 0, 0, 0);
 		justify-content: space-between;
 		padding: 0 0 .7rem 0;
 	}
 
-	#contact > .contact-icons > li {
+	#contact > .contact-icons-container > li {
 		-webkit-filter: invert(.8);
 		filter: invert(.8);
 	}
