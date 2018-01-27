@@ -265,8 +265,7 @@ table {
 
 @media (max-width: 800px){
 	h1 {
-		font-size: 2.2rem;
-		white-space: nowrap;
+		font-size: 2.1rem;
 	}
 
 	.container {
