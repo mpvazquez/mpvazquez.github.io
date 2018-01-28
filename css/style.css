@@ -155,6 +155,10 @@ table {
 	justify-content: space-between;
 }
 
+#about-me > article {
+	width: 100%;
+}
+
 #about-me > article > h3 {
 	font-size: 1.5em;
 	margin-top: 0;
@@ -287,11 +291,6 @@ table {
 		flex-direction: column;
 	}
 
-	#about-me > article {
-		display: block;
-		width: auto;
-	}
-
 	#contact > .contact-icons-container {
 		background-color: rgba(0, 0, 0, 0);
 		justify-content: space-between;
@@ -323,8 +322,6 @@ table {
 
 	#project-list > article {
 		background-color: rgba(250, 250, 250, .1);
-		display: block;
-		width: auto;
 	}
 
 	#project-list h3 {
