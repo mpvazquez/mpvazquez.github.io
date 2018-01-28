@@ -181,7 +181,6 @@ table {
 
 #header {
 	background-image: url(../images/brickwall.png);
-	background-repeat: repeat;
 	display: flex;
 	justify-content: center;
 	padding: 1rem 0;
@@ -196,7 +195,7 @@ table {
 }
 
 #main-photo {
-	height: 180px;
+	height: 11rem;
 	-webkit-border-top-left-radius: 100px;
 	-moz-border-top-left-radius: 100px;
 	border-top-left-radius: 100px;
