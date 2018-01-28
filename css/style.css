@@ -194,18 +194,18 @@ table {
 #main-photo {
 	background-image: url(../images/marco-pretell-vazquez.jpg);
 	background-size: cover;
-	border-top-left-radius: 100px;
-	border-bottom-right-radius: 100px;
+	border-top-left-radius: 110px;
+	border-bottom-right-radius: 110px;
 	box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-    height: 10rem;
-	transition: transform 2s ease-in-out;
-	width: 10rem;
+    height: 11rem;
+	transition: transform 2s ease-out;
+	width: 9rem;
 }
 
 #main-photo:hover {
-	-webkit-transform: rotate3d(1, -1, 0, 1440deg);
-	-ms-transform: rotate3d(1, -1, 0, 1440deg)
-  	transform: rotate3d(1, -1, 0, 1440deg);
+	-webkit-transform: rotate3d(.8, -1, 0, 720deg);
+	-ms-transform: rotate3d(.8, -1, 0, 720deg);
+	transform: rotate3d(.8, -1, 0, 720deg);
 }
 
 #nav-bar {
