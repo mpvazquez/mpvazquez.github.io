@@ -96,12 +96,13 @@ table {
 }
 
 .nav-link:hover > a:after {
-	content: "";
-	width: 100%;
-    height: 3px;
-    position: absolute;
-    bottom: -8px;
     background: #80F20D;
+    bottom: -8px;
+	content: "";
+    height: 3px;
+    left: -25%;
+    position: absolute;
+	width: 150%;
 }
 
 .paragraphs {
@@ -112,18 +113,14 @@ table {
 }
 
 .project-image {
+	box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
 	width: 100%;
-	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.3);
 }
 
 .social-icons {
 	height: 2.5em;
 	top: 0;
 	position: relative;
-	-moz-transition: top 0.3s ease-in;
-	-webkit-transition: top 0.3s ease-in;
 	transition: top 0.3s ease-in;
 	vertical-align: middle;
 }
@@ -195,16 +192,20 @@ table {
 }
 
 #main-photo {
-	height: 11rem;
-	-webkit-border-top-left-radius: 100px;
-	-moz-border-top-left-radius: 100px;
+	background-image: url(../images/marco-pretell-vazquez.jpg);
+	background-size: cover;
 	border-top-left-radius: 100px;
-	-webkit-border-bottom-right-radius: 100px;
-	-moz-border-bottom-right-radius: 100px;
 	border-bottom-right-radius: 100px;
-	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+	box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
+    height: 10rem;
+	transition: transform 2s ease-in-out;
+	width: 10rem;
+}
+
+#main-photo:hover {
+	-webkit-transform: rotate3d(1, -1, 0, 1440deg);
+	-ms-transform: rotate3d(1, -1, 0, 1440deg)
+  	transform: rotate3d(1, -1, 0, 1440deg);
 }
 
 #nav-bar {
