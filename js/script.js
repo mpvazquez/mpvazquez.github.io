@@ -7,12 +7,11 @@
 
         if (hash) {
             var target = document.querySelector('[name=' + hash + ']');
-            var newScrollTop = target.getBoundingClientRect().top + window.scrollY;
+            var offset = target.getBoundingClientRect().top + window.scrollY;
 
-            window.scroll({
-                top: newScrollTop - 20,
-                left: 0,
-                behavior: 'smooth'
+            Velocity(document.body, 'scroll', {
+                offset: offset - 20,
+                duration: 'slow'
             });
         }
 
