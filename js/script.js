@@ -2,10 +2,11 @@
     'use strict';
 
     function animatedScroll(event) {
-        event.preventDefault();
         var hash = event.currentTarget.hash.slice(1);
 
         if (hash) {
+            event.preventDefault();
+
             var target = document.querySelector('[name=' + hash + ']');
             var offset = target.getBoundingClientRect().top + window.scrollY;
 
