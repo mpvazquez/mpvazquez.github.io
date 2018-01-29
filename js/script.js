@@ -7,11 +7,12 @@
         if (hash) {
             event.preventDefault();
 
+            var navBarHeight = document.getElementById('nav-links').offsetHeight;
             var target = document.querySelector('[name=' + hash + ']');
             var offset = target.getBoundingClientRect().top + window.scrollY;
 
             Velocity(document.body, 'scroll', {
-                offset: offset - 20,
+                offset: offset - navBarHeight,
                 duration: 'slow'
             });
         }
