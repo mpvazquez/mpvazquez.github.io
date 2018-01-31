@@ -60,8 +60,8 @@ table {
 }
 
 .contact-icons-container > li {
-	display: inline;
 	font-size: 1.3em;
+	list-style: none;
 }
 
 .container {
@@ -74,7 +74,7 @@ table {
 }
 
 .mobile-hide {
-	display: inline-block;
+	display: initial;
 }
 
 .mobile-show {
@@ -87,8 +87,8 @@ table {
 	letter-spacing: .5px;
 	list-style: none;
 	position: relative;
-	text-transform: uppercase;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .nav-link > a:hover {
@@ -110,6 +110,10 @@ table {
 	font-family: Open Sans;
 	font-size: 1em;
 	text-align: justify;
+}
+
+.project-description > .paragraphs {
+	margin: 0;
 }
 
 .project-image {
@@ -155,11 +159,7 @@ table {
 	justify-content: space-between;
 }
 
-#about-me > article {
-	width: 100%;
-}
-
-#about-me > article > h3 {
+#about-me > .article > h3 {
 	font-size: 1.5em;
 	margin-top: 0;
 }
@@ -199,8 +199,8 @@ table {
 #main-photo {
 	background-image: url(../images/marco-pretell-vazquez.jpg);
 	background-size: cover;
-	border-top-left-radius: 110px;
 	border-bottom-right-radius: 110px;
+	border-top-left-radius: 110px;
 	box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
     height: 11rem;
 	transition: transform 2s ease-out;
@@ -223,8 +223,8 @@ table {
 	box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.75);
 	display: flex;
 	justify-content: space-between;
-	padding: .5rem 10%;
 	margin: 0;
+	padding: .5rem 10%;
 }
 
 #other-skills {
@@ -234,12 +234,13 @@ table {
 #project-list {
 	align-items: flex-start;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 }
 
-#project-list > article {
+#project-list > .article {
+	display: flex;
 	flex-basis: 32%;
+	flex-direction: column;
 }
 
 #tagline {
@@ -254,9 +255,14 @@ table {
 
 /*Start Responsive Design*/
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
+
 	h1 {
 		font-size: 2.1rem;
+	}
+
+	.article {
+		margin-bottom: 2rem;
 	}
 
 	.container {
@@ -268,7 +274,7 @@ table {
 	}
 
 	.mobile-show {
-		display: block;
+		display: inherit;
 	}
 
 	.nav-link {
@@ -279,11 +285,28 @@ table {
 		content: none;
 	}
 
+	.project-description {
+		order: -1;
+	}
+
+	.project-description > h3 {
+		margin-top: 0;
+		padding: 1rem 0 0 1rem;
+	}
+
+	.project-description > .paragraphs {
+		padding: 1rem;
+		padding-top: 0;
+	}
+
 	.social-icons:hover {
 		top: 0;
 	}
 
+	/* ID Selectors */
+
 	#about-me,
+	#header,
 	#project-list {
 		flex-direction: column;
 	}
@@ -300,7 +323,6 @@ table {
 	}
 
 	#header {
-		flex-direction: column;
 		padding: 0;
 	}
 
@@ -308,26 +330,12 @@ table {
 		margin: 1em auto;
 	}
 
-	#more-gifs,
-	#tech-skills {
-		margin: 2rem 0;
-	}
-
 	#nav-links {
 		padding: .5rem 5%;
 	}
 
-	#project-list > article {
+	#project-list > .article {
 		background-color: rgba(250, 250, 250, .1);
-	}
-
-	#project-list h3 {
-		padding: 1rem 0 0 1rem;
-	}
-
-	#project-list p {
-		margin: 0;
-		padding: 1rem;
 	}
 
 	#tagline {
