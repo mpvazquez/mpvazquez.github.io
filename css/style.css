@@ -159,6 +159,10 @@ table {
 	justify-content: space-between;
 }
 
+#about-me > .article {
+	width: 100%;
+}
+
 #about-me > .article > h3 {
 	font-size: 1.5em;
 	margin-top: 0;
