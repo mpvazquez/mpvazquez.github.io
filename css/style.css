@@ -193,6 +193,7 @@ table {
 	display: flex;
 	justify-content: center;
 	margin: 0 2rem;
+	perspective: 15rem;
 }
 
 #main-photo {
