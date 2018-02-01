@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 
 a {
 	color: #4CD964;
@@ -266,6 +266,10 @@ table {
 /*Start Responsive Design*/
 
 @media (max-width: 992px) {
+	.article {
+		margin-bottom: 2rem;
+	}
+
 	#bio,
 	#tech-skills {
 		flex-basis: 49%;
@@ -293,10 +297,6 @@ table {
 		font-size: 2.1rem;
 	}
 
-	.article {
-		margin-bottom: 2rem;
-	}
-
 	.container {
 		margin: 0 5%;
 	}
@@ -313,7 +313,7 @@ table {
 	    font-size: 1rem;
 	}
 
-	.nav-link:hover > a:after {
+	.nav-link > a:after {
 		content: none;
 	}
 
