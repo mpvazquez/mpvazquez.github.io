@@ -157,6 +157,7 @@ table {
 	align-items: flex-start;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 #about-me > .article {
@@ -231,10 +232,6 @@ table {
 	padding: .5rem 10%;
 }
 
-#other-skills {
-	flex-basis: 29%;
-}
-
 #project-list {
 	align-items: flex-start;
 	display: flex;
@@ -245,6 +242,10 @@ table {
 	display: flex;
 	flex-basis: 32%;
 	flex-direction: column;
+}
+
+#relevant-skills {
+	flex-basis: 29%;
 }
 
 #tagline {
@@ -258,6 +259,28 @@ table {
 }
 
 /*Start Responsive Design*/
+
+@media (max-width: 992px) {
+	#bio,
+	#tech-skills {
+		flex-basis: 49%;
+	}
+
+	#relevant-skills {
+		flex-basis: auto;
+	}
+
+	#relevant-skills-tables {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#relevant-skills-tables > table {
+		flex-basis: 49%;
+		max-width: 49%;
+	}
+}
 
 @media (max-width: 768px) {
 
@@ -318,7 +341,7 @@ table {
 	#contact > .contact-icons-container {
 		background-color: rgba(0, 0, 0, 0);
 		justify-content: space-between;
-		padding: 0 0 .7rem 0;
+		padding: 0;
 	}
 
 	#contact > .contact-icons-container > li {
@@ -341,6 +364,14 @@ table {
 	#project-list > .article {
 		flex-basis: auto;
 		background-color: rgba(250, 250, 250, .1);
+	}
+
+	#relevant-skills-tables {
+		display: block;
+	}
+
+	#relevant-skills-tables > table {
+		max-width: initial;
 	}
 
 	#tagline {
