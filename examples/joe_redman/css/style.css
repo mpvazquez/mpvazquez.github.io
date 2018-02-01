@@ -66,6 +66,7 @@ nav ul#hamburger {
   background-size: cover;
   margin-right: 10%; 
   margin-top: .75em;
+  cursor: pointer;
   display: none;
   height: 1.3em;
   width: 1.3em;
@@ -459,6 +460,10 @@ footer li {
 section.credits {
   margin-bottom: 0;
   padding-bottom: 2em;
+}
+
+.hide {
+  display: none;
 }
 
 /* Mobile/Responsive-ready media queries */

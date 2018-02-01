@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  'use strict';
   // carousel item constructor function and render prototype
   var CarouselItem = function(imageName, imageIndex){
     this.imageName = imageName;
@@ -226,6 +227,8 @@ $(document).ready(function() {
   $('#hamburger').on("click", function(e) {
     e.stopPropagation();
     if($('.page-wrapper').css("position") !== "absolute") {
+      $('.slider-menu').removeClass('hide');
+      
       $('.page-wrapper')
         .css("width", $('.page-wrapper').width())
         .css("position", "absolute");
@@ -241,12 +244,13 @@ $(document).ready(function() {
   $("body, .slider-menu a").on("click", function() {
     if($('.page-wrapper').css("position") === "absolute") {
       $('.page-wrapper').animate({"right": 0}, 
-        "slow", 'swing').promise().done(function() {
-        $(".page-wrapper")
-          .css("width", "auto")
-          .css("position", "inherit");
-        $("section.content-layer").css("display", "none");
-      });
+        0, 'swing');
+
+      $(".page-wrapper")
+        .css("width", "auto")
+        .css("position", "inherit");
+
+      $("section.content-layer").css("display", "none");
     }
   });
 
