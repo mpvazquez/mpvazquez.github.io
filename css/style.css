@@ -95,14 +95,19 @@ table {
 	color: #80F20D;
 }
 
-.nav-link:hover > a:after {
+.nav-link > a:after {
     background: #80F20D;
-    bottom: -8px;
 	content: "";
+    bottom: -8px;
     height: 3px;
     left: -25%;
     position: absolute;
+	visibility: hidden;
 	width: 150%;
+}
+
+.nav-link:hover > a:after {
+	visibility: visible;
 }
 
 .paragraphs {
