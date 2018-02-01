@@ -102,12 +102,12 @@ table {
     height: 3px;
     left: -25%;
     position: absolute;
-	visibility: hidden;
+	opacity: 0;
 	width: 150%;
 }
 
 .nav-link:hover > a:after {
-	visibility: visible;
+	opacity: 1;
 }
 
 .paragraphs {
