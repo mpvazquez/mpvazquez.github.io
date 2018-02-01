@@ -270,9 +270,17 @@ table {
 		margin-bottom: 2rem;
 	}
 
+	.container {
+		margin: 0 5%;
+	}
+
 	#bio,
 	#tech-skills {
 		flex-basis: 49%;
+	}
+
+	#nav-links {
+		padding: .5rem 5%;
 	}
 
 	#relevant-skills {
@@ -295,10 +303,6 @@ table {
 
 	h1 {
 		font-size: 2.1rem;
-	}
-
-	.container {
-		margin: 0 5%;
 	}
 
 	.mobile-hide {
@@ -360,10 +364,6 @@ table {
 
 	#main-photo {
 		margin: 1em auto;
-	}
-
-	#nav-links {
-		padding: .5rem 5%;
 	}
 
 	#project-list > .article {
