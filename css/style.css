@@ -295,7 +295,7 @@ table {
 
 	#relevant-skills-tables > table {
 		flex-basis: 49%;
-		max-width: 49%;
+		width: 49%;
 	}
 }
 
@@ -376,7 +376,7 @@ table {
 	}
 
 	#relevant-skills-tables > table {
-		max-width: initial;
+		width: initial;
 	}
 
 	#tagline {
