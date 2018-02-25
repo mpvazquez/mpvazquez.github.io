@@ -152,6 +152,12 @@
 	font-family: Open Sans;
 }
 
+.article > hr + .paragraphs:first-of-type,
+.article > .table > tbody > tr:first-child > td > .h4,
+#relevant-skills-tables > .table > tbody > tr:first-child > td > .h4 {
+	margin-top: 0;
+}
+
 /* ID Selectors */
 
 #about-me {
@@ -379,8 +385,12 @@
 		display: block;
 	}
 
-	#relevant-skills-tables > table {
+	#relevant-skills-tables > .table {
 		width: initial;
+	}
+
+	#relevant-skills-tables > .table:last-child > tbody > tr:first-child > td > .h4 {
+		margin-top: .5em;
 	}
 
 	#tagline {
