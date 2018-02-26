@@ -87,12 +87,12 @@
 }
 
 .nav-link > a:after {
-    background: #80F20D;
+  background: #80F20D;
 	content: "";
-    bottom: -8px;
-    height: 3px;
-    left: -25%;
-    position: absolute;
+  bottom: -8px;
+  height: 3px;
+  left: -25%;
+  position: absolute;
 	opacity: 0;
 	width: 150%;
 }
@@ -150,12 +150,6 @@
 .table {
 	color: #FFFFFF;
 	font-family: Open Sans;
-}
-
-.article > hr + .paragraphs:first-of-type,
-.article > .table > tbody > tr:first-child > td > .h4,
-#relevant-skills-tables > .table > tbody > tr:first-child > td > .h4 {
-	margin-top: 0;
 }
 
 /* ID Selectors */
@@ -218,7 +212,7 @@
 	border-bottom-right-radius: 110px;
 	border-top-left-radius: 110px;
 	box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.3);
-    height: 11rem;
+  height: 11rem;
 	transition: transform 2s ease-out;
 	width: 9rem;
 }
@@ -257,6 +251,12 @@
 
 #relevant-skills {
 	flex-basis: 29%;
+}
+
+#relevant-skills-tables > .table:first-child > tbody > tr:first-child > td > .h4,
+.article > hr + .paragraphs:first-of-type,
+.article > .table > tbody > tr:first-child > td > .h4 {
+	margin-top: 0;
 }
 
 #tagline {
@@ -304,17 +304,17 @@
 		justify-content: space-between;
 	}
 
-	#relevant-skills-tables > table {
+	#relevant-skills-tables > .table {
 		flex-basis: 49%;
 		width: 49%;
+	}
+
+	#relevant-skills-tables > .table > tbody > tr:first-child > td > .h4 {
+		margin-top: 0;
 	}
 }
 
 @media (max-width: 768px) {
-/*	hr.mobile-show {
-		display: block;
-	}*/
-
 	.h1 {
 		font-size: 2.1rem;
 	}
@@ -328,7 +328,7 @@
 	}
 
 	.nav-link {
-	    font-size: 1rem;
+	  font-size: 1rem;
 	}
 
 	.nav-link > a:after {
@@ -389,7 +389,7 @@
 		width: initial;
 	}
 
-	#relevant-skills-tables > .table:last-child > tbody > tr:first-child > td > .h4 {
+	#relevant-skills-tables > .table > tbody > tr:first-child > td > .h4 {
 		margin-top: .5em;
 	}
 
