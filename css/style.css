@@ -38,6 +38,10 @@
 	text-align: center;
 }
 
+.h2:not(#tagline) {
+	letter-spacing: 5px;
+}
+
 .h3 {
 	color: #FFFFFF;
 	font-size: 1.5em;
@@ -96,7 +100,7 @@
 	opacity: 1;
 }
 
-.paragraphs {
+.paragraph {
 	color: #FFFFFF;
 	font-family: Open Sans;
 	font-size: 1em;
@@ -197,7 +201,7 @@
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	margin: 0 2rem;
+	margin-right: 2rem;
 	perspective: 15rem;
 }
 
@@ -366,6 +370,10 @@
 		filter: invert(.8);
 	}
 
+	#header-left {
+		margin: 0;
+	}
+
 	#header {
 		padding: 0;
 	}
@@ -402,22 +410,28 @@
 	#header {
 		padding: 1.5rem 0;
 	}
+
 	#header-left {
+		margin-right: 3rem;
 		perspective: 20rem;
 	}
+
 	#main-photo {
 		border-top-left-radius: 130px;
 		border-bottom-right-radius: 130px;
 		width: 11rem;
     height: 13rem;
 	}
+
 	#tagline {
 		letter-spacing: .15rem;
 	}
+
 	.h1 {
 		line-height: 1;
 		font-size: 4em;
 	}
+
 	.h2 {
 		line-height: 2.5;
 	}
