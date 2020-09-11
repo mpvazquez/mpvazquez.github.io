@@ -18,11 +18,6 @@
 	margin: 0 10%;
 }
 
-.fixed {
-	position: fixed;
-	top: 0;
-}
-
 .h1 {
 	font-family: Oswald;
 	font-size: 3.3em;
@@ -225,6 +220,8 @@
 
 #nav-bar {
 	background-image: url(../images/brickwall.png);
+	position: sticky;
+	top: 0;
 	width: 100%;
 }
 
