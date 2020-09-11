@@ -56,7 +56,7 @@
 }
 
 .link:focus {
-	outline: none;
+	outline: solid #4cc1d9;
 }
 
 .mobile-hide {
@@ -258,8 +258,9 @@
 
 #tagline {
 	color: #000000;
-	display: inline-block;
+	display: flex;
 	font-size: 1.4em;
+	justify-content: space-between;
 	margin: 0 auto;
 }
 
@@ -392,5 +393,32 @@
 
 	#tagline {
 		font-size: 1.5em;
+		justify-content: center;
+    letter-spacing: 2px;
+	}
+}
+
+@media (min-width: 1025px) {
+	#header {
+		padding: 1.5rem 0;
+	}
+	#header-left {
+		perspective: 20rem;
+	}
+	#main-photo {
+		border-top-left-radius: 130px;
+		border-bottom-right-radius: 130px;
+		width: 11rem;
+    height: 13rem;
+	}
+	#tagline {
+		letter-spacing: .15rem;
+	}
+	.h1 {
+		line-height: 1;
+		font-size: 4em;
+	}
+	.h2 {
+		line-height: 2.5;
 	}
 }
