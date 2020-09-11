@@ -19,15 +19,11 @@
 
         return false;
     }
-    
-    window.addEventListener('DOMContentLoaded', function() {
-        // setStickyHeader();
 
+    window.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.nav-link a').forEach(function(navLink) {
             navLink.addEventListener('click', animatedScroll);
         });
-
-        // window.addEventListener('resize', setStickyHeader);
     });
 
 })();
