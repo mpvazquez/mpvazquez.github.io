@@ -19,7 +19,7 @@
 }
 
 .h1 {
-	font-family: Oswald;
+	font-family: Oswald, Sans-Serif;
 	font-size: 3.3em;
 	margin: 0;
 }
@@ -28,7 +28,7 @@
 .h3,
 .h4 {
 	color: #4CD964;
-	font-family: Lato;
+	font-family: Lato, Sans-Serif;
 	font-weight: 300;
 	text-transform: uppercase;
 }
@@ -72,7 +72,7 @@
 }
 
 .nav-link {
-	font-family: Oswald;
+	font-family: Oswald, Sans-Serif;
 	font-size: 1.3em;
 	letter-spacing: .5px;
 	list-style: none;
@@ -102,7 +102,7 @@
 
 .paragraph {
 	color: #FFFFFF;
-	font-family: Open Sans;
+	font-family: Open Sans, Sans-Serif;
 	font-size: 1em;
 	text-align: justify;
 }
@@ -148,7 +148,7 @@
 
 .table {
 	color: #FFFFFF;
-	font-family: Open Sans;
+	font-family: Open Sans, Sans-Serif;
 }
 
 /* ID Selectors */
@@ -184,7 +184,7 @@
 #footer-text {
 	color: #FFFFFF;
 	text-align: center;
-	font-family: Lato;
+	font-family: Lato, Sans-Serif;
 	font-weight: 100;
 	padding: 1rem;
 }
