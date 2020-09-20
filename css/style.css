@@ -107,7 +107,7 @@
 	text-align: justify;
 }
 
-.project-description > .paragraphs {
+.project-description > .paragraph {
 	margin: 0;
 }
 
@@ -255,7 +255,7 @@
 }
 
 #relevant-skills-tables > .table:first-child > tbody > tr:first-child > td > .h4,
-.article > hr + .paragraphs:first-of-type,
+.article > hr + .paragraph:first-of-type,
 .article > .table > tbody > tr:first-child > td > .h4 {
 	margin-top: 0;
 }
@@ -314,6 +314,10 @@
 	#relevant-skills-tables > .table > tbody > tr:first-child > td > .h4 {
 		margin-top: 0;
 	}
+
+	#tagline {
+		font-size: 1.2em;
+	}
 }
 
 @media (max-width: 768px) {
@@ -346,7 +350,7 @@
 		padding: 1rem 0 0 1rem;
 	}
 
-	.project-description > .paragraphs {
+	.project-description > .paragraph {
 		padding: 1rem;
 		padding-top: 0;
 	}
@@ -424,7 +428,7 @@
 	}
 
 	#tagline {
-		letter-spacing: .15rem;
+		letter-spacing: .02rem;
 	}
 
 	.h1 {
