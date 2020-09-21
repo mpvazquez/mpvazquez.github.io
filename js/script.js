@@ -44,6 +44,7 @@
       });
 
       request.open('POST', url, true);
+      request.setRequestHeader('Access-Control-Allow-Origin', location.href);
       request.send(formData);
     });
 
