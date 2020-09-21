@@ -37,6 +37,7 @@
       request.addEventListener('load', function(success) {
         console.log('Success submitting form: ', success);
         contactForm.reset();
+        alert('Thank you for contacting me. Your message has successfully been sent!');
       });
       request.addEventListener('error', function(error) {
         console.error('Error submiting form: ', error);
