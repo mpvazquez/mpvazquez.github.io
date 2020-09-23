@@ -544,6 +544,10 @@
 		flex-direction: column;
 	}
 
+	#confirmation-modal {
+			width: 85%;
+	}
+
 	#contact-icons > .contact-icons-container {
 		background-color: rgba(0, 0, 0, 0);
 		justify-content: space-between;
