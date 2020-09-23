@@ -23,7 +23,7 @@
 		</div>
 		<div id="header-right">
 			<h1 class="h1">MARCO PRETELL-V&Aacute;ZQUEZ</h1>
-			<h2 class="h2" id="tagline">
+			<h2 class="h2 tagline">
 				<span>Front-End/UI Engineer</span> <span class="mobile-hide">&#8226;</span> <span class="mobile-hide">I Love Good UI/UX Design</span>
 			</h2>
 			<ul class="contact-icons-container">
@@ -364,7 +364,7 @@
 		<a class="link" name="contact"></a>
 		<h2 class="h2">Contact Me</h2>
 
-		<form id="contact-form" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
+		<form id="contact-form" method="POST" target="iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
 			<fieldset class="form-group">
 				<label class="form-label">Purpose <span class="required-field">*</span></label>
 
@@ -398,7 +398,7 @@
 
 			<fieldset class="form-group">
 				<div class="button-container">
-					<button class="submit-button" type="submit" name="button">Send</button>
+					<button class="submit-button" type="submit" name="button" value="send">Send</button>
 				</div>
 			</fieldset>
 		</form>
@@ -441,6 +441,13 @@
 		<p class="paragraph" id="footer-text">This website was designed and built from scratch by <br class="mobile-show" /> Marco Pretell-V&aacute;zquez</p>
 	</footer>
 
+	<div id="modal-background" class="modal-background hidden"></div>
+	<div id="confirmation-modal" class="modal hidden">
+		<button id="close-button" class="close-button" value="close" title="close modal">close</button>
+		<p class="h2">Your message has been sent!</p>
+		<p class="paragraph">Thank you for contacting me.</p>
+	</div>
+	<iframe name="iframe" id="iframe" style="display:none;"></iframe>
 	<script src="vendors/velocity.js"></script>
 	<script src="js/script.js"></script>
 </body>
