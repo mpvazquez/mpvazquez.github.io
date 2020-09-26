@@ -1,7 +1,7 @@
 /* Import fonts */
-@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Archivo+Narrow);
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,  pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
 
@@ -64,7 +64,7 @@ nav ul#main-nav a {
 }
 nav ul#hamburger {
   background-size: cover;
-  margin-right: 10%; 
+  margin-right: 10%;
   margin-top: .75em;
   cursor: pointer;
   display: none;
@@ -199,8 +199,8 @@ div.joe-redman h1 {
   position: relative;
   height: 30em;
 }
-#carousel ul,  
-#carousel li {  
+#carousel ul,
+#carousel li {
   list-style: none;
   list-style-type: none;
 }
@@ -510,7 +510,7 @@ section.credits {
     display: inline-block;
   }
   div.hero {
-    background-position: center; 
+    background-position: center;
   }
   div.joe-redman {
     display: none;
@@ -578,7 +578,7 @@ section.credits {
 @media (max-width: 650px) {
   div.hero {
     height: 568px;
-    background-size: cover; 
+    background-size: cover;
     background-image: url(../images/mobile-bg/joe-redman-mobile-01.jpg);
   }
   div.contact-hero {
