@@ -55,10 +55,6 @@
       }
     }
 
-    // Temp testing script for confirmationModal
-    // window.go = openModal; // temp
-    // openModal();
-
     document.getElementById('iframe').addEventListener('load', function(event) {
       contactForm.reset();
       openModal();

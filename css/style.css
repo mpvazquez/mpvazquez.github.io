@@ -3,9 +3,31 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
 .close-button {
-		position: absolute;
-		right: 5px;
-		top: 5px;
+	background: none;
+	border: none;
+	height: 40px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 40px;
+}
+
+.close-button:after,
+.close-button:before {
+	background-color: #333;
+	content: "";
+	height: 25px;
+	position: absolute;
+	top: 0;
+	width: 2px;
+}
+
+.close-button:before {
+	transform: rotate(45deg);
+}
+
+.close-button:after {
+	transform: rotate(-45deg);
 }
 
 .close-button:focus,
@@ -545,7 +567,11 @@
 	}
 
 	#confirmation-modal {
-			width: 85%;
+		width: 85%;
+	}
+
+	#contact-form {
+		padding: 1rem;
 	}
 
 	#contact-icons > .contact-icons-container {
