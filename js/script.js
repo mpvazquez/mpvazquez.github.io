@@ -55,18 +55,14 @@
       }
     }
 
-    // Temp testing script for confirmationModal
-    // window.go = openModal; // temp
-    // openModal();
-
-    document.getElementById('iframe').addEventListener('load', function(event) {
-      contactForm.reset();
-      openModal();
-    });
-
     window.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.nav-link a').forEach(function(navLink) {
             navLink.addEventListener('click', animatedScroll);
+        });
+
+        document.getElementById('iframe').addEventListener('load', function(event) {
+          contactForm.reset();
+          openModal();
         });
     });
 
