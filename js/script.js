@@ -59,7 +59,9 @@
         document.querySelectorAll('.nav-link a').forEach(function(navLink) {
             navLink.addEventListener('click', animatedScroll);
         });
+    });
 
+    window.addEventListener('load', function() {
         document.getElementById('iframe').addEventListener('load', function(event) {
           contactForm.reset();
           openModal();
