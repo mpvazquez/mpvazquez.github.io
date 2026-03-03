@@ -1,461 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Marco's Portfolio | Front-End / UI Engineer (Developer) based in New York City</title>
+    <title>Marco Pretell-Vázquez | UI Engineer — Accessibility, Design Systems & Performance</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="canonical" href="https://www.mpvazquez.com/" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Marco Pretell-Vázquez is a UI Engineer based in New York City, specializing in design systems, accessibility (WCAG), and performance optimization. 12+ years building scalable, accessible interfaces." />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="canonical" href="https://www.marcopvazquez.com/" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Marco Pretell-Vázquez | UI Engineer" />
+    <meta property="og:description" content="UI Engineer specializing in design systems, accessibility (WCAG), and performance optimization. 12+ years building scalable, accessible interfaces." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mpvazquez.com/" />
 
-	<meta charset="utf-8" />
-	<meta name="description" content="A personal portfolio page for Marco Pretell-Vazquez, a Front-End / UI Engineer based in New York City. Part-time Freelancer. Full-time Developer" />
-	<meta name="robots" content="index, follow" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21024248-2"></script>
-	<script src="js/head-script.js"></script>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-21024248-2"></script>
+    <script src="js/head-script.js"></script>
 </head>
-
 <body id="body">
-	<header id="header">
-		<a class="link" name="top"></a>
-		<div id="header-left">
-			<div id="main-photo"></div>
-		</div>
-		<div id="header-right">
-			<h1 class="h1">MARCO PRETELL-V&Aacute;ZQUEZ</h1>
-			<h2 class="h2 tagline">
-				<span>Front-End/UI Engineer</span> <span class="mobile-hide">&#8226;</span> <span class="mobile-hide">I Love Good UI/UX Design</span>
-			</h2>
-			<ul class="contact-icons-container">
-				<li class="contact-list-item">
-					<a class="link" target="_blank" href="https://github.com/mpvazquez">
-						<img class="social-icons" src="images/github.png" alt="Github" />
-					</a>
-				</li>
-				<li class="contact-list-item">
-					<a class="link" target="_blank" href="https://www.linkedin.com/in/marcopvazquez">
-						<img class="social-icons" src="images/linkedin.png" alt="LinkedIn" />
-					</a>
-				</li>
-				<li class="contact-list-item">
-					<a class="link" target="_blank" href="https://twitter.com/nycmarcopolo">
-						<img class="social-icons" src="images/twitter.png" alt="Twitter" />
-					</a>
-				</li>
-				<li class="contact-list-item">
-					<a class="link" target="_blank" href="http://instagram.com/nycmarcopolo">
-						<img class="social-icons" src="images/instagram.png" alt="Instagram" />
-					</a>
-				</li>
-				<li class="contact-list-item">
-					<a class="link" href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
-						<img class="social-icons" src="images/email.png" alt="Email" />
-					</a>
-				</li>
-			</ul>
-		</div>
-	</header>
+    <header id="header">
+        <a class="link" id="top"></a>
 
-	<nav id="nav-bar">
-		<ul id="nav-links">
-			<li class="nav-link">
-				<a class="link" href="#top">
-					Top
-				</a>
-			</li>
-			<li class="nav-link">
-				<a class="link" href="#about">
-					About
-				</a>
-			</li>
-			<li class="nav-link">
-				<a class="link" href="#projects">
-					Projects
-				</a>
-			</li>
-			<li class="nav-link">
-				<a class="link" href="#contact">
-					Contact
-				</a>
-			</li>
-			<li class="nav-link">
-				<a class="link" target="_blank" href="images/marco-pretell-vazquez-cv-2020.pdf">
-					R&#233;sum&#233;
-				</a>
-			</li>
-		</ul>
-	</nav>
+        <div id="header-left">
+            <div id="main-photo" role="img" aria-label="Photo of Marco Pretell-Vázquez"></div>
+        </div>
 
-	<section class="container" id="top-section">
-		<a class="link" name="about"></a>
-		<h2 class="h2">About Me</h2>
+        <div id="header-right">
+            <h1 class="h1">MARCO PRETELL-V&Aacute;ZQUEZ</h1>
+            <h2 class="h2 tagline">
+                <span>UI Engineer</span>
+                <span class="mobile-hide">&#8226;</span>
+                <span class="mobile-hide">Accessibility, Design Systems &amp; Performance</span>
+            </h2>
 
-		<div id="about-me">
-			<article class="article" id="bio">
-				<h3 class="h3">Hello</h3>
+            <ul class="contact-icons-container" aria-label="Social links">
+                <li class="contact-list-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/mpvazquez" aria-label="Github profile">
+                        <img class="social-icons" src="images/github.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+                <li class="contact-list-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/marcopvazquez" aria-label="LinkedIn profile">
+                        <img class="social-icons" src="images/linkedin.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+                <li class="contact-list-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/marcopvazquez" aria-label="Twitter profile">
+                        <img class="social-icons" src="images/twitter.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+                <li class="contact-list-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://instagram.com/nycmarcopolo" aria-label="Instagram profile">
+                        <img class="social-icons" src="images/instagram.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+                <li class="contact-list-item">
+                    <a class="link" href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" aria-label="Send email">
+                        <img class="social-icons" src="images/email.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-				<hr />
+    <nav id="nav-bar" aria-label="Main navigation">
+        <ul id="nav-links">
+            <li class="nav-link">
+                <a class="link" href="#top">
+                    Top
+                </a>
+            </li>
+            <li class="nav-link">
+                <a class="link" href="#about">
+                    About
+                </a>
+            </li>
+            <li class="nav-link">
+                <a class="link" href="#projects">
+                    Work
+                </a>
+            </li>
+            <li class="nav-link">
+                <a class="link" href="#contact">
+                    Contact
+                </a>
+            </li>
+            <li class="nav-link">
+                <a class="link" target="_blank" rel="noopener noreferrer" href="images/marco-pretell-vazquez-cv-2026.pdf">
+                    R&#233;sum&#233;
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-				<p class="paragraph">My name is Marco, and I'm a Front-End/UI Engineer based in New York City via Indiana. My work focuses on building, testing and scaling MVP enhancements (or proof of concepts) in a quick, iterative, and data-driven process. I have a passion for making good user experiences (UX) by partnering with the creative team to translate UX design into the digital format, also known as the user interface (UI)! I also have professional experience building React.js products for Fortune 500 enterprise companies.</p>
+    <section class="container" id="top-section">
+        <a class="link" id="about"></a>
 
-				<p class="paragraph">As far as technology goes, I enjoy working with powerful frameworks like React.js, but at the end of the day, I really love the power and versatility of simple, vanilla JavaScript and CSS. Given the chance, I will remove jQuery in lieu of using the DOM Web API every time. Styling and CSS work is what I refer to as "my happy place." It’s extremely satisfying when I get to swap JS animations for better performant CSS ones. </p>
+        <h2 class="h2">About Me</h2>
+        <div id="about-me">
+            <article class="article" id="bio">
+                <h3 class="h3">Hello</h3>
+                <hr />
+                <p class="paragraph">I'm Marco, a UI Engineer in New York City specializing in design systems, accessibility (WCAG), and performance. For 12+ years, I've built scalable component libraries and interfaces where thoughtful HTML, CSS architecture, and attention to detail make a real difference.</p>
 
-				<p class="paragraph">My path as a web developer began at my first non-technical job out of college. On the first day at the job, I was given the “admin” username and password and was instructed to manage all the content on the company website. This was my first proverbial look behind the “magic” curtain of a website, where I tinkered with basic HTML and CSS. I'm so thankful for that opportunity because that job function and  interest is what eventually led me to do what I love by building digital experiences today! </p>
+                <p class="paragraph">Most recently, I led the creation of a multi-brand design system serving 19 e-commerce brands at FullBeauty Brands — a CSS-first component library with token-based theming and interactive documentation. I also built the UI layer for a headless application in React, Next.js, and TypeScript. Before that, I worked on high-traffic pages at Bloomingdales and component tooling at Sprinklr.</p>
 
-			</article>
-			<article class="article" id="tech-skills">
-				<h3 class="h3">Technical Skills</h3>
+                <p class="paragraph">CSS is my happy place. I got into web development tinkering with HTML at my first job out of college, and that curiosity is what drives me today — building interfaces that are accessible, performant, and built to scale.</p>
+            </article>
 
-				<hr />
+            <article class="article" id="tech-skills">
+                <h3 class="h3">Technical Skills</h3>
+                <hr />
+                <table class="table">
+                    <tr><td colspan="2"><h4 class="h4">CORE</h4></td></tr>
+                    <tr>
+                        <td class="skills-name">HTML5</td>
+                        <td class="skills-score">
+                            <div style="width:100%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">CSS3 | Sass</td>
+                        <td class="skills-score">
+                            <div style="width:100%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">Design Systems</td>
+                        <td class="skills-score">
+                            <div style="width:98%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">Accessibility (WCAG)</td>
+                        <td class="skills-score">
+                            <div style="width:95%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">Responsive Design</td>
+                        <td class="skills-score">
+                            <div style="width:98%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">Performance (Core Web Vitals)</td>
+                        <td class="skills-score">
+                            <div style="width:90%"></div>
+                        </td>
+                    </tr>
 
-				<table class="table">
-					<tr><td colspan="2"><h4 class="h4">FRONT-END</h4></td></tr>
-					<tr>
-						<td class="skills-name">JavaScript (ES6)</td>
-						<td class="skills-score">
-							<div style="width:98%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Sass | CSS3</td>
-						<td class="skills-score">
-							<div style="width:100%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">HTML5</td>
-						<td class="skills-score">
-							<div style="width:92%"></div>
-						</td>
-					</tr>
+                    <tr><td colspan="2"><h4 class="h4">JAVASCRIPT</h4></td></tr>
+                    <tr>
+                        <td class="skills-name">JavaScript (ES6+)</td>
+                        <td class="skills-score">
+                            <div style="width:90%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">TypeScript</td>
+                        <td class="skills-score">
+                            <div style="width:75%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">React</td>
+                        <td class="skills-score">
+                            <div style="width:80%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">Next.js</td>
+                        <td class="skills-score">
+                            <div style="width:70%"></div>
+                        </td>
+                    </tr>
 
-					<tr>
-						<td class="skills-name">DOM Web API</td>
-						<td class="skills-score">
-							<div style="width:100%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">jQuery.js</td>
-						<td class="skills-score">
-							<div style="width:90%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">D3.js</td>
-						<td class="skills-score">
-							<div style="width:50%"></div>
-						</td>
-					</tr>
+                    <tr><td colspan="2"><h4 class="h4">TOOLS &amp; WORKFLOW</h4></td></tr>
+                    <tr>
+                        <td class="skills-name">Git</td>
+                        <td class="skills-score">
+                            <div style="width:95%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">Bootstrap</td>
+                        <td class="skills-score">
+                            <div style="width:95%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">Node.js | Express</td>
+                        <td class="skills-score">
+                            <div style="width:75%"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="skills-name">Jest</td>
+                        <td class="skills-score">
+                            <div style="width:75%"></div>
+                        </td>
+                    </tr>
+                </table>
+            </article>
 
-					<tr><td colspan="2"><h4 class="h4">FRAMEWORKS</h4></td></tr>
-					<tr>
-						<td class="skills-name">React.js</td>
-						<td class="skills-score">
-							<div style="width:95%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Redux</td>
-						<td class="skills-score">
-							<div style="width:80%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Backbone.js</td>
-						<td class="skills-score">
-							<div style="width:85%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Ruby on Rails</td>
-						<td class="skills-score">
-							<div style="width:30%"></div>
-						</td>
-					</tr>
+            <article class="article" id="relevant-skills">
+                <h3 class="h3">Areas of Focus</h3>
+                <hr />
+                <div id="relevant-skills-tables">
+                    <table class="table">
+                        <tr>
+                            <td><h4 class="h4">SPECIALIZATIONS</h4></td>
+                        </tr>
+                        <tr>
+                            <td>Design Systems &amp; Component Libraries</td>
+                        </tr>
+                        <tr>
+                            <td>CSS Architecture &amp; Theming</td>
+                        </tr>
+                        <tr>
+                            <td>WCAG Accessibility</td>
+                        </tr>
+                        <tr>
+                            <td>Performance Optimization</td>
+                        </tr>
+                        <tr>
+                            <td>Responsive &amp; Mobile-First Design</td>
+                        </tr>
+                        <tr>
+                            <td>Semantic HTML</td>
+                        </tr>
+                        <tr>
+                            <td><h4 class="h4">COLLABORATION</h4></td>
+                        </tr>
+                        <tr>
+                            <td>Cross-Functional Teams (Design, UX, Product, QA)</td>
+                        </tr>
+                        <tr>
+                            <td>Design-to-Code Translation</td>
+                        </tr>
+                        <tr>
+                            <td>UI Standards &amp; Best Practices</td>
+                        </tr>
+                    </table>
 
-					<tr><td colspan="2"><h4 class="h4">BACK-END</h4></td></tr>
-					<tr>
-						<td class="skills-name">Express</td>
-						<td class="skills-score">
-							<div style="width:85%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Node.js</td>
-						<td class="skills-score">
-							<div style="width:90%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Ruby</td>
-						<td class="skills-score">
-							<div style="width:45%"></div>
-						</td>
-					</tr>
+                    <table class="table">
+                        <tr>
+                            <td><h4 class="h4">DESIGN TOOLS</h4></td>
+                        </tr>
+                        <tr>
+                            <td>Adobe XD</td>
+                        </tr>
+                        <tr>
+                            <td><h4 class="h4">PLATFORMS</h4></td>
+                        </tr>
+                        <tr>
+                            <td>Salesforce Commerce Cloud (SFCC)</td>
+                        </tr>
+                        <tr>
+                            <td>Azure</td>
+                        </tr>
+                        <tr>
+                            <td>Jira</td>
+                        </tr>
+                        <tr>
+                            <td><h4 class="h4">LANGUAGES</h4></td>
+                        </tr>
+                        <tr>
+                            <td>English (native)</td>
+                        </tr>
+                        <tr>
+                            <td>Spanish (fluent)</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+    </section>
 
-					<tr><td colspan="2"><h4 class="h4">TESTING</h4></td></tr>
-					<tr>
-						<td class="skills-name">Jasmine</td>
-						<td class="skills-score">
-							<div style="width:85%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Chai</td>
-						<td class="skills-score">
-							<div style="width:75%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Mocha</td>
-						<td class="skills-score">
-							<div style="width:80%"></div>
-						</td>
-					</tr>
-					<tr><td colspan="2"><h4 class="h4">MORE</h4></td></tr>
-					<tr>
-						<td class="skills-name">Web Performance</td>
-						<td class="skills-score">
-							<div style="width:80%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">WCAG Accessibility</td>
-						<td class="skills-score">
-							<div style="width:85%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Webpack</td>
-						<td class="skills-score">
-							<div style="width:70%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">Git</td>
-						<td class="skills-score">
-							<div style="width:100%"></div>
-						</td>
-					</tr>
-					<tr>
-						<td class="skills-name">SEO</td>
-						<td class="skills-score">
-							<div style="width:70%"></div>
-						</td>
-					</tr>
-				</table>
-			</article>
-			<article class="article" id="relevant-skills">
-				<h3 class="h3">Relevant Skills</h3>
-				<hr />
-				<div id="relevant-skills-tables">
-					<table class="table">
-						<tr>
-							<td><h4 class="h4">METHODOLOGIES</h4></td>
-						</tr>
-						<tr>
-							<td>Agile Software Development</td>
-						</tr>
-						<tr>
-							<td>Lean Software Development</td>
-						</tr>
-						<tr>
-							<td>Responsive Web Design (RWD)</td>
-						</tr>
-						<tr>
-							<td>Test-Driven Development (TDD)</td>
-						</tr>
-						<tr>
-							<td>Behavior-Driven Development (BDD)</td>
-						</tr>
-						<tr>
-							<td>Object-Oriented Programming (OOP)</td>
-						</tr>
-						<tr>
-							<td><h4 class="h4">UI/UX Design Tools</h4></td>
-						</tr>
-						<tr>
-							<td>Sketch</td>
-						</tr>
-						<tr>
-							<td>Zeplin</td>
-						</tr>
-						<tr>
-							<td>Invision</td>
-						</tr>
-					</table>
-					<table class="table">
-						<tr>
-							<td><h4 class="h4">Adobe Creative Suite</h4></td>
-						</tr>
-						<tr>
-							<td>Illustrator</td>
-						</tr>
-						<tr>
-							<td>Photoshop</td>
-						</tr>
-						<tr>
-							<td><h4 class="h4">Languages</h4></td>
-						</tr>
-						<tr>
-							<td>English (Native)</td>
-						</tr>
-						<tr>
-							<td>Spanish (Fluent)</td>
-						</tr>
-						<tr>
-							<td><h4 class="h4">More</h4></td>
-						</tr>
-						<tr>
-							<td>WordPress</td>
-						</tr>
-						<tr>
-							<td>Client Enablement</td>
-						</tr>
-						<tr>
-							<td>Project Management</td>
-						</tr>
-					</table>
-				</div>
-			</article>
-		</div>
-	</section>
+    <section class="container">
+        <a class="link" id="projects"></a>
+        <h2 class="h2">Featured Work</h2>
+        <div id="project-list">
+            <article class="article" id="design-system">
+                <a class="link" target="_blank" rel="noopener noreferrer" href="https://designsystem.fbbrands.com/ww/component-library.html#text-input" aria-label="View FullBeauty Brands Design System">
+                    <img class="project-image" src="images/design-system.png" alt="FullBeauty Brands Design System" loading="lazy" />
+                </a>
+                <div class="project-description">
+                    <h3 class="h3">FullBeauty Brands Design System</h3>
+                    <hr />
+                    <p class="paragraph">Led the creation of a centralized design system scaling across 19 e-commerce brands. Built with a Sass-based token architecture, the system features a CSS-first component library covering buttons, form elements, modals, navigation, alerts, and more — each with full interactive state documentation (default, hover, focus, disabled). The theming layer uses brand-level Sass variables mapped to CSS custom properties, allowing each brand to maintain its visual identity from a single codebase.</p>
+                    <p class="paragraph">Key decisions included advocating for a CSS-first approach that minimized JavaScript dependencies, and designing an isolation strategy during the SiteGenesis-to-SFRA platform migration that separated legacy code from new components — enabling the design system to become the company-wide standard.</p>
+                </div>
+            </article>
+        </div>
+    </section>
 
-	<section class="container">
-		<a class="link" name="projects"></a>
-		<h2 class="h2">Projects</h2>
+    <section class="container">
+        <a class="link" id="contact"></a>
+        <h2 class="h2">Contact Me</h2>
+        <form id="contact-form" method="POST" target="iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
+            <fieldset class="form-group">
+                <label class="form-label">Purpose <span class="required-field">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-button-container">
+                        <input class="radio-button" type="radio" name="entry.633803438" value="Business" required id="business-purpose">
+                        <label class="form-label" for="business-purpose">Business</label>
+                    </div>
+                    <div class="radio-button-container">
+                        <input class="radio-button" type="radio" name="entry.633803438" value="Personal" required id="personal-purpose">
+                        <label class="form-label" for="personal-purpose">Personal</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="form-label" for="name-field">Name <span class="required-field">*</span></label>
+                <input id="name-field" class="form-input-text" type="text" name="entry.610708785" value="" placeholder="Name" required>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="form-label" for="email-field">Email <span class="required-field">*</span></label>
+                <input id="email-field" class="form-input-text" type="email" name="entry.1719665273" value="" placeholder="Email" required>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="form-label" for="message-field">Message <span class="required-field">*</span></label>
+                <textarea id="message-field" class="form-input-textarea" type="text" name="entry.1633536652" value="" placeholder="Message" required></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="button-container">
+                    <button class="submit-button" type="submit" name="button" value="send">Send</button>
+                </div>
+            </fieldset>
+        </form>
+        <article class="article" id="contact-icons">
+            <ul class="contact-icons-container" aria-label="Social links">
+                <li class="contact-list-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/mpvazquez" aria-label="Github profile">
+                        <img class="social-icons" src="images/github.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+                <li class="contact-list-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/marcopvazquez" aria-label="LinkedIn profile">
+                        <img class="social-icons" src="images/linkedin.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+                <li class="contact-list-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/marcopvazquez" aria-label="Twitter profile">
+                        <img class="social-icons" src="images/twitter.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+                <li class="contact-list-item">
+                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://instagram.com/nycmarcopolo" aria-label="Instagram profile">
+                        <img class="social-icons" src="images/instagram.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+                <li class="contact-list-item">
+                    <a class="link" href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" aria-label="Send email">
+                        <img class="social-icons" src="images/email.png" alt="" aria-hidden="true" />
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </section>
 
-		<div id="project-list">
-			<article class="article" id="more-gifs">
-				<a class="link" target="_blank" href="http://more-gifs.herokuapp.com/">
-					<img class="project-image" src="images/more-gifs.png" alt="more gifs app">
-				</a>
-				<div class="project-description">
-					<h3 class="h3">More GIFs</h3>
-					<hr />
-					<p class="paragraph">A React.js and Node.js project developed to allow a user to discover gifs by entering and selecting keywords. The page will return gifs for a given keyword, plus a list of synonyms that allow the user to expand their gif journey. This project was designed and built from scratch.</p>
-				</div>
-			</article>
-			<article class="article" id="scattergories">
-				<a class="link" target="_blank" href="http://scattergories.herokuapp.com/">
-					<img class="project-image" src="images/scattergories2.png" alt="scattergories app">
-				</a>
-				<div class="project-description">
-					<h3 class="h3">Scattergories</h3>
-					<hr />
-					<p class="paragraph">A development project created to simulate the popular game, Scattergories. In it's current iteration, it allows a user to engage in a single-player game. This project implements: JavaScript, Node.js, Express.js, HTML5 and CSS3. This project was designed and built from scratch.</p>
-				</div>
-			</article>
-			<article class="article" id="joe-redman">
-				<a class="link" target="_blank" href="examples/joe_redman/index.html">
-					<img class="project-image" src="images/joeredman.png" alt="joe redman site">
-				</a>
-				<div class="project-description">
-					<h3 class="h3">Joe Redman</h3>
-					<hr />
-					<p class="paragraph">A fully responsive (RWD) front-end project featuring a custom photo carousel built in vanilla JavaScript. It uses the following technologies: JavaScript, jQuery, HTML5 and CSS3. This project was designed and built from scratch.</p>
-				</div>
-			</article>
-		</div>
-	</section>
+    <footer class="container" id="footer">
+        <hr class="mobile-show" />
+        <p class="paragraph" id="footer-text">This website was designed and built from scratch by <br class="mobile-show" /> Marco Pretell-V&aacute;zquez</p>
+    </footer>
 
-	<section class="container">
-		<a class="link" name="contact"></a>
-		<h2 class="h2">Contact Me</h2>
+    <div id="modal-background" class="modal-background hidden"></div>
+    <div id="confirmation-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button id="close-button" class="close-button" value="close" title="close modal" aria-labelledby="close-label">
+            <span id="close-label" class="hidden">Close</span>
+        </button>
+        <p class="h2" id="modal-title">Your message has been sent!</p>
+        <p class="paragraph">Thank you for contacting me.</p>
+    </div>
 
-		<form id="contact-form" method="POST" target="iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
-			<fieldset class="form-group">
-				<label class="form-label">Purpose <span class="required-field">*</span></label>
-
-				<div class="radio-group">
-					<div class="radio-button-container">
-						<input class="radio-button" type="radio" name="entry.633803438" value="Business" required id="business-purpose">
-						<label class="form-label" for="business-purpose">Business</label>
-					</div>
-
-					<div class="radio-button-container">
-						<input class="radio-button" type="radio" name="entry.633803438" value="Personal" required id="personal-purpose">
-						<label class="form-label" for="personal-purpose">Personal</label>
-					</div>
-				</div>
-			</fieldset>
-
-			<fieldset class="form-group">
-				<label class="form-label" for="name-field">Name <span class="required-field">*</span></label>
-				<input id="name-field" class="form-input-text" type="text" name="entry.610708785" value="" placeholder="Name" required>
-			</fieldset>
-
-			<fieldset class="form-group">
-				<label class="form-label" for="email-field">Email <span class="required-field">*</span></label>
-				<input id="email-field" class="form-input-text" type="email" name="entry.1719665273" value="" placeholder="Email" required>
-			</fieldset>
-
-			<fieldset class="form-group">
-				<label class="form-label" for="message-field">Message <span class="required-field">*</span></label>
-				<textarea id="message-field" class="form-input-textarea" type="text" name="entry.1633536652" value="" placeholder="Message" required></textarea>
-			</fieldset>
-
-			<fieldset class="form-group">
-				<div class="button-container">
-					<button class="submit-button" type="submit" name="button" value="send">Send</button>
-				</div>
-			</fieldset>
-		</form>
-
-		<article class="article" id="contact-icons">
-			<ul class="contact-icons-container">
-				<li class="contact-list-item">
-					<a class="link" target="_blank" href="https://github.com/mpvazquez">
-						<img class="social-icons" src="images/github.png" alt="Github" />
-					</a>
-				</li>
-				<li class="contact-list-item">
-					<a class="link" target="_blank" href="https://www.linkedin.com/in/marcopvazquez">
-						<img class="social-icons" src="images/linkedin.png" alt="LinkedIn" />
-					</a>
-				</li>
-				<li class="contact-list-item">
-					<a class="link" target="_blank" href="https://twitter.com/nycmarcopolo">
-						<img class="social-icons" src="images/twitter.png" alt="Twitter" />
-					</a>
-				</li>
-				<li class="contact-list-item">
-					<a class="link" target="_blank" href="https://instagram.com/nycmarcopolo">
-						<img class="social-icons" src="images/instagram.png" alt="Instagram" />
-					</a>
-				</li>
-				<li class="contact-list-item">
-					<a class="link" href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
-						<img class="social-icons" src="images/email.png" alt="Email" />
-					</a>
-				</li>
-			</ul>
-		</article>
-	</section>
-
-
-	<footer class="container" id="footer">
-		<hr class="mobile-show" />
-
-		<p class="paragraph" id="footer-text">This website was designed and built from scratch by <br class="mobile-show" /> Marco Pretell-V&aacute;zquez</p>
-	</footer>
-
-	<div id="modal-background" class="modal-background hidden"></div>
-	<div id="confirmation-modal" class="modal hidden">
-		<button id="close-button" class="close-button" value="close" title="close modal" labelledby="close-label">
-			<span id="close-label" class="hidden">Close</span>
-		</button>
-		<p class="h2">Your message has been sent!</p>
-		<p class="paragraph">Thank you for contacting me.</p>
-	</div>
-
-	<iframe name="iframe" id="iframe" style="display:none;"></iframe>
-	<script src="vendors/velocity.js"></script>
-	<script src="js/script.js"></script>
+    <iframe name="iframe" id="iframe" style="display:none;"></iframe>
+    <script src="vendors/velocity.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
