@@ -659,7 +659,6 @@
 	}
 }
 
-/* Single project layout */
 #project-list > .article:only-child {
     flex-basis: 100%;
     flex-direction: row;
