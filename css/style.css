@@ -37,7 +37,6 @@
 }
 
 .contact-icons-container {
-	background-color: rgba(255, 255, 255, .5);
 	display: flex;
 	justify-content: space-around;
 	padding: .7rem 0;
@@ -349,6 +348,10 @@
 	padding: .7rem 25%;
 }
 
+#contact-icons .social-icons {
+	filter: invert(100%);
+}
+
 #footer-text {
 	color: #FFFFFF;
 	text-align: center;
@@ -363,6 +366,10 @@
 	justify-content: center;
 	padding: 1rem 0;
 	text-align: center;
+}
+
+#header .contact-icons-container {
+	background-color: rgba(255, 255, 255, .5);
 }
 
 #header-left {
@@ -506,6 +513,16 @@
 
 	.mobile-hide {
 		display: none;
+	}
+
+	.tagline {
+		display: block;
+	}
+
+	.tagline-secondary {
+		display: block;
+		font-size: 1.25rem;
+		letter-spacing: normal;
 	}
 
 	.mobile-show {
