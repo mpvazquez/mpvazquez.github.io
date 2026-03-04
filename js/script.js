@@ -1,6 +1,8 @@
 (function() {
     'use strict';
     var ESCAPE_KEYCODE = 27;
+    var MIN_SUBMIT_TIME = 3000; // reject submissions faster than 3 seconds
+    var pageLoadTime = Date.now();
     var bodyEl = document.getElementById('body');
     var closeButton = document.getElementById('close-button');
     var confirmationModal = document.getElementById('confirmation-modal');
@@ -49,6 +51,17 @@
         });
     });
     window.addEventListener('load', function() {
+        // Spam protection: honeypot + time-based check
+        contactForm.addEventListener('submit', function(event) {
+            var honeypot = document.getElementById('website-url');
+            var elapsed = Date.now() - pageLoadTime;
+
+            if (honeypot.value || elapsed < MIN_SUBMIT_TIME) {
+                event.preventDefault();
+                return false;
+            }
+        });
+
         document.getElementById('iframe').addEventListener('load', function(event) {
           contactForm.reset();
           openModal();
