@@ -87,9 +87,13 @@
 	outline: 2px solid #4CD964;
 }
 
-.h1 {
+.h1-name {
 	font-family: Oswald, Sans-Serif;
-	font-size: 3.3em;
+	font-size: 3.3rem;
+	margin: 0;
+}
+
+.h1 {
 	margin: 0;
 }
 
@@ -117,7 +121,7 @@
 }
 
 .h4 {
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	margin: .5em 0 0 0;
 }
 
@@ -279,10 +283,10 @@
 	font-family: Open Sans, Sans-Serif;
 }
 
-.tagline {
+.h1-title {
 	color: #000000;
 	display: flex;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	justify-content: space-between;
 	letter-spacing: normal;
 	margin: 0 auto;
@@ -459,8 +463,8 @@
 		top: 0;
 	}
 
-	.tagline {
-		font-size: 1.2em;
+	.h1-title {
+		font-size: 1.2rem;
 	}
 
 	#bio,
@@ -493,7 +497,7 @@
 }
 
 @media (max-width: 768px) {
-	.h1 {
+	.h1-name {
 		font-size: 2.1rem;
 	}
 
@@ -519,11 +523,15 @@
 		display: none;
 	}
 
-	.tagline {
+	.mobile-block {
 		display: block;
 	}
 
-	.tagline-secondary {
+	.h1-title {
+		display: block;
+	}
+
+	.h1-title-secondary {
 		display: block;
 		font-size: 1.25rem;
 		letter-spacing: normal;
@@ -570,10 +578,10 @@
 		width: 100%;
 	}
 
-	.tagline {
-		font-size: 1.5em;
+	.h1-title {
+		font-size: 1.5rem;
 		justify-content: center;
-    letter-spacing: 2px;
+		letter-spacing: 2px;
 	}
 
 	/* ID Selectors */
@@ -666,17 +674,17 @@
     height: 13rem;
 	}
 
-	.h1 {
+	.h1-name {
 		line-height: 1;
-		font-size: 4em;
+		font-size: 4rem;
+	}
+
+	.h1-title {
+		letter-spacing: .02rem;
 	}
 
 	.h2 {
 		line-height: 2.5;
-	}
-
-	.tagline {
-		letter-spacing: .02rem;
 	}
 }
 
