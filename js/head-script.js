@@ -8,7 +8,7 @@
       location.replace(SECURE_PROTOCOL + location.hostname);
     }
 
-    // Global site tag (gtag.js) - Google Analytics
+    // Google tag (gtag.js) - GA4
     window.dataLayer = window.dataLayer || [];
 
 	  function gtag() {
@@ -16,5 +16,5 @@
 		}
 
 	  gtag('js', new Date());
-	  gtag('config', 'UA-21024248-2');
+	  gtag('config', 'G-DBXQ2GR719');
 })();
