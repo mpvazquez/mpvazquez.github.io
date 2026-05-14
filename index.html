@@ -1,439 +1,662 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <title>Marco Pretell-Vázquez | UI Engineer — Accessibility, Design Systems & Performance</title>
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="canonical" href="https://www.mpvazquez.com/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Open+Sans:wght@300;600&family=Oswald&display=swap" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta name="description" content="Marco Pretell-Vázquez is a UI Engineer based in New York City, specializing in design systems, accessibility (WCAG 2.2), and performance optimization. 12+ years building scalable, accessible interfaces." />
-    <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<title>Marco Pretell-Vázquez · UI Engineer · Design Systems, Accessibility &amp; Performance · NYC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Marco Pretell-Vázquez is a UI Engineer in NYC focused on design systems, component architecture, accessibility (WCAG 2.2 AA) and performance. React, Next.js, TypeScript, SFCC." />
+<meta name="author" content="Marco Pretell-Vázquez" />
+<meta name="theme-color" content="#F5F1EA" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://www.marcopvazquez.com/" />
+<link rel="shortcut icon" href="mpvazquez.github.io/favicon.ico" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Marco Pretell-Vázquez | UI Engineer" />
-    <meta property="og:description" content="UI Engineer specializing in design systems, accessibility (WCAG 2.2), and performance optimization. 12+ years building scalable, accessible interfaces." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.mpvazquez.com/" />
-    <meta property="og:image" content="https://www.mpvazquez.com/images/marco-pretell-vazquez.jpg" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Marco Pretell-Vázquez" />
+<meta property="og:title" content="Marco Pretell-Vázquez · UI Engineer · Design Systems, Accessibility &amp; Performance" />
+<meta property="og:description" content="UI Engineer in NYC. Design systems, accessibility, and performance across multi-brand platforms." />
+<meta property="og:url" content="https://www.marcopvazquez.com/" />
+<meta property="og:image" content="https://www.marcopvazquez.com/assets/og-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Marco Pretell-Vázquez. UI Engineer. Design systems, accessibility, performance." />
+<meta property="og:locale" content="en_US" />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Marco Pretell-Vázquez",
-        "jobTitle": "UI Engineer",
-        "url": "https://www.mpvazquez.com",
-        "sameAs": [
-            "https://www.linkedin.com/in/marcopvazquez",
-            "https://github.com/mpvazquez"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "New York",
-            "addressRegion": "NY",
-            "addressCountry": "US"
-        },
-        "knowsAbout": ["Design Systems", "Accessibility", "WCAG 2.2", "CSS Architecture", "UI Engineering", "Performance Optimization"]
-    }
-    </script>
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@marcopvazquez" />
+<meta name="twitter:creator" content="@marcopvazquez" />
+<meta name="twitter:title" content="Marco Pretell-Vázquez · UI Engineer" />
+<meta name="twitter:description" content="UI Engineer in NYC. Design systems, accessibility, and performance across multi-brand platforms." />
+<meta name="twitter:image" content="https://www.marcopvazquez.com/assets/og-card.png" />
+<meta name="twitter:image:alt" content="Marco Pretell-Vázquez. UI Engineer. Design systems, accessibility, performance." />
 
-    <!-- Google tag (gtag.js) - GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBXQ2GR719"></script>
-    <script src="js/head-script.js"></script>
+<!-- Structured data: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marco Pretell-Vázquez",
+  "jobTitle": "UI Engineer",
+  "description": "UI Engineer specializing in design systems, accessibility (WCAG 2.2 AA), and performance.",
+  "url": "https://www.marcopvazquez.com/",
+  "image": "https://www.marcopvazquez.com/assets/og-card.png",
+  "sameAs": [
+    "https://www.linkedin.com/in/marcopvazquez",
+    "https://github.com/mpvazquez",
+    "https://twitter.com/marcopvazquez"
+  ],
+  "email": "mailto:marco.pvazquez@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" },
+  "knowsAbout": ["Design Systems", "Accessibility", "WCAG 2.2 AA", "Core Web Vitals", "React", "Next.js", "TypeScript", "SFCC", "Sass", "Storybook"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/portfolio.css?v=6" />
+<style>
+  /* Critical inline overrides */
+  .nav-brand { white-space: nowrap; min-width: 0; }
+  @media (max-width: 560px) { .nav-brand span:not(.dot) { font-size: 16px; } }
+  .hero h1 .line > span { display:inline-block; transform:translateY(0); opacity:1; will-change:transform, opacity; }
+  body.js-ready .hero h1 .line > span { animation: rise 0.9s cubic-bezier(.2,.8,.2,1) both; }
+  body.js-ready .hero h1 .line:nth-of-type(1) > span { animation-delay: 0.08s; }
+  body.js-ready .hero h1 .line:nth-of-type(2) > span { animation-delay: 0.18s; }
+  body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; }
+  @keyframes rise { from { transform:translateY(110%); opacity:0; } to { transform:translateY(0); opacity:1; } }
+  /* Accessible focus ring */
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  /* Skip link */
+  .skip-link { position:absolute; left:-9999px; top:0; background:var(--ink); color:var(--paper); padding:10px 14px; z-index:200; font-family:var(--mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; }
+  .skip-link:focus { left:12px; top:12px; }
+  @media (prefers-reduced-motion: reduce) {
+    body.js-ready .hero h1 .line > span { animation: none !important; }
+  }
+</style>
+
+<script>
+  // Theme init (pre-paint, no flash)
+  (function () {
+    try {
+      var saved = localStorage.getItem('mpv-theme');
+      var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', saved || sys);
+    } catch (e) {}
+  })();
+</script>
 </head>
-<body id="body">
-    <header id="header">
-        <a class="link" id="top"></a>
 
-        <div id="header-left">
-            <img id="main-photo" alt="" src="images/marco-pretell-vazquez.jpg" aria-hidden="true" />
-        </div>
+<body>
 
-        <div id="header-right">
-            <h1 class="h1">
-                <div class="h1-name">MARCO PRETELL-V&Aacute;ZQUEZ</div>
-                <div class="h1-title">
-                    <span class="mobile-block">UI Engineer</span>
-                    <span class="mobile-hide"> | </span> 
-                    <span class="mobile-block h1-title-secondary">Accessibility, Design Systems &amp; Performance</span>
-                </div>
-            </h1>
+<a class="skip-link" href="#main">Skip to content</a>
 
-            <ul class="contact-icons-container" aria-label="Social links">
-                <li class="contact-list-item">
-                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/mpvazquez" aria-label="Github profile">
-                        <img class="social-icons" src="images/github.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-                <li class="contact-list-item">
-                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/marcopvazquez" aria-label="LinkedIn profile">
-                        <img class="social-icons" src="images/linkedin.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-                <li class="contact-list-item">
-                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/marcopvazquez" aria-label="Twitter profile">
-                        <img class="social-icons" src="images/twitter.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-                <li class="contact-list-item">
-                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://instagram.com/nycmarcopolo" aria-label="Instagram profile">
-                        <img class="social-icons" src="images/instagram.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-                <li class="contact-list-item">
-                    <a class="link" href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" aria-label="Send email">
-                        <img class="social-icons" src="images/email.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav" aria-label="Primary">
+  <a class="nav-brand" href="#top">
+    <span class="dot" aria-hidden="true"></span>
+    <span>Marco&nbsp;Pretell-Vázquez</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Selected&nbsp;Work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex; align-items:center; gap:8px;">
+    <a class="nav-cta" href="marco-pretell-vazquez-cv.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>
+  </div>
+</nav>
 
-    <nav id="nav-bar" aria-label="Main navigation">
-        <ul id="nav-links">
-            <li class="nav-link">
-                <a class="link" href="#top">
-                    Top
-                </a>
-            </li>
-            <li class="nav-link">
-                <a class="link" href="#about">
-                    About
-                </a>
-            </li>
-            <li class="nav-link">
-                <a class="link" href="#projects">
-                    Work
-                </a>
-            </li>
-            <li class="nav-link">
-                <a class="link" href="#contact">
-                    Contact
-                </a>
-            </li>
-            <li class="nav-link">
-                <a class="link" target="_blank" rel="noopener noreferrer" href="images/marco-pretell-vazquez-cv-2026.pdf">
-                    R&#233;sum&#233;
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <section class="container" id="top-section">
-        <a class="link" id="about"></a>
-
-        <h2 class="h2">About Me</h2>
-        <div id="about-me">
-            <article class="article" id="bio">
-                <h3 class="h3">Hello</h3>
-                <hr />
-                <p class="paragraph">I'm Marco, a UI Engineer in New York City specializing in design systems, accessibility (WCAG 2.2), and performance. For 12+ years, I've built scalable component libraries and interfaces where thoughtful HTML, CSS architecture, and attention to detail make a real difference.</p>
-
-                <p class="paragraph">Most recently, I led the creation of a multi-brand design system serving 19 e-commerce brands at FullBeauty Brands — a CSS-first component library with token-based theming and interactive documentation. I also built the production-ready UI layer for a headless application in React, Next.js, and TypeScript, translating design intent into high-fidelity, scalable code. Before that, I shipped components for high-traffic pages at Bloomingdales and built reusable templates at Sprinklr.</p>
-
-                <p class="paragraph">CSS is my happy place. I got into web development tinkering with HTML at my first job out of college, and that curiosity is what drives me today — building interfaces that are accessible, performant, and built to scale.</p>
-            </article>
-
-            <article class="article" id="tech-skills">
-                <h3 class="h3">Technical Skills</h3>
-                <hr />
-                <table class="table">
-                    <tr><td colspan="2"><h4 class="h4">CORE</h4></td></tr>
-                    <tr>
-                        <td class="skills-name">HTML5</td>
-                        <td class="skills-score">
-                            <div style="width:100%" title="100% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">CSS3 | Sass</td>
-                        <td class="skills-score">
-                            <div style="width:100%" title="100% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">Design Systems</td>
-                        <td class="skills-score">
-                            <div style="width:98%" title="98% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">Accessibility</td>
-                        <td class="skills-score">
-                            <div style="width:95%" title="95% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">Responsive Design</td>
-                        <td class="skills-score">
-                            <div style="width:98%" title="98% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">Performance<i>*</i></td>
-                        <td class="skills-score">
-                            <div style="width:90%" title="90% out of 100"></div>
-                        </td>
-                    </tr>
-
-                    <tr><td colspan="2"><h4 class="h4">JS &amp; FRAMEWORKS</h4></td></tr>
-                    <tr>
-                        <td class="skills-name">JavaScript (ES6+)</td>
-                        <td class="skills-score">
-                            <div style="width:90%" title="90% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">TypeScript</td>
-                        <td class="skills-score">
-                            <div style="width:75%" title="75% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">React</td>
-                        <td class="skills-score">
-                            <div style="width:80%" title="80% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">Next.js</td>
-                        <td class="skills-score">
-                            <div style="width:70%" title="70% out of 100"></div>
-                        </td>
-                    </tr>
-
-                    <tr><td colspan="2"><h4 class="h4">TOOLS &amp; WORKFLOW</h4></td></tr>
-                    <tr>
-                        <td class="skills-name">AI Development<i>**</i></td>
-                        <td class="skills-score">
-                            <div style="width:85%" title="85% out of 100"></div>
-                        </td>
-                    </tr>
-					<tr>
-                        <td class="skills-name">Git</td>
-                        <td class="skills-score">
-                            <div style="width:95%" title="95% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">Storybook</td>
-                        <td class="skills-score">
-                            <div style="width:65%" title="65% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">Node.js</td>
-                        <td class="skills-score">
-                            <div style="width:50%" title="50% out of 100"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="skills-name">Jest</td>
-                        <td class="skills-score">
-                            <div style="width:75%" title="75% out of 100"></div>
-                        </td>
-                    </tr>
-                </table>
-				<table class="table mt-1">
-					<tr class="skills-name">
-						<td><i>* Core Web Vitals</i></td>
-					</tr>
-					<tr class="skills-name">
-						<td><i>** Claude, GitHub Copilot</i></td>
-					</tr>
-				</table>
-            </article>
-
-            <article class="article" id="relevant-skills">
-                <h3 class="h3">Areas of Focus</h3>
-                <hr />
-                <div id="relevant-skills-tables">
-                    <table class="table">
-                        <tr>
-                            <td><h4 class="h4">SPECIALIZATIONS</h4></td>
-                        </tr>
-                        <tr>
-                            <td>Design Systems &amp; Component Libraries</td>
-                        </tr>
-                        <tr>
-                            <td>CSS Architecture &amp; Theming</td>
-                        </tr>
-                        <tr>
-                            <td>WCAG 2.2 / ARIA Accessibility</td>
-                        </tr>
-                        <tr>
-                            <td>Performance Optimization</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile-First / Responsive Design</td>
-                        </tr>
-                        <tr>
-                            <td>Semantic HTML</td>
-                        </tr>
-                        <tr>
-                            <td><h4 class="h4">COLLABORATION</h4></td>
-                        </tr>
-                        <tr>
-                            <td>Cross-Functional Teams (Design, UX, Product, QA)</td>
-                        </tr>
-                        <tr>
-                            <td>Cross-Team Influence &amp; UI Standards</td>
-                        </tr>
-                        <tr>
-                            <td>Design-to-Code Translation</td>
-                        </tr>
-                    </table>
-
-                    <table class="table">
-                        <tr>
-                            <td><h4 class="h4">TOOLS</h4></td>
-                        </tr>
-                        <tr>
-                            <td>VoiceOver (macOS)</td>
-                        </tr>
-                        <tr>
-                            <td>Lighthouse</td>
-                        </tr>
-                        <tr>
-                            <td>Adobe XD</td>
-                        </tr>
-                        <tr>
-                            <td><h4 class="h4">PLATFORMS</h4></td>
-                        </tr>
-                        <tr>
-                            <td>Salesforce Commerce Cloud (SFCC)</td>
-                        </tr>
-                        <tr>
-                            <td>Azure</td>
-                        </tr>
-                        <tr>
-                            <td>Jira</td>
-                        </tr>
-                        <tr>
-                            <td><h4 class="h4">LANGUAGES</h4></td>
-                        </tr>
-                        <tr>
-                            <td>English (native)</td>
-                        </tr>
-                        <tr>
-                            <td>Spanish (fluent)</td>
-                        </tr>
-                    </table>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="container">
-        <a class="link" id="projects"></a>
-        <h2 class="h2">Featured Work</h2>
-        <div id="project-list">
-            <article class="article" id="design-system">
-                <a class="link" target="_blank" rel="noopener noreferrer" href="https://designsystem.fbbrands.com/ww/component-library.html#text-input" aria-label="View FullBeauty Brands Design System">
-                    <img class="project-image" src="images/design-system.png" alt="FullBeauty Brands Design System" loading="lazy" />
-                </a>
-                <div class="project-description">
-                    <h3 class="h3">FullBeauty Brands Design System</h3>
-                    <hr />
-                    <p class="paragraph">A centralized design system scaling across 19 e-commerce brands, built on a Sass-based token architecture. The CSS-first component library covers buttons, form elements, modals, navigation, alerts, and more — each with full interactive state documentation (default, hover, focus, disabled). Brand-level Sass variables mapped to CSS custom properties allow each brand to maintain its visual identity from a single codebase.</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="container">
-        <a class="link" id="contact"></a>
-        <h2 class="h2">Contact Me</h2>
-        <form id="contact-form" method="POST" target="iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
-            <fieldset class="form-group">
-                <label class="form-label">Purpose <span class="required-field">*</span></label>
-                <div class="radio-group">
-                    <div class="radio-button-container">
-                        <input class="radio-button" type="radio" name="entry.633803438" value="Business" required id="business-purpose">
-                        <label class="form-label" for="business-purpose">Business</label>
-                    </div>
-                    <div class="radio-button-container">
-                        <input class="radio-button" type="radio" name="entry.633803438" value="Personal" required id="personal-purpose">
-                        <label class="form-label" for="personal-purpose">Personal</label>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset class="form-group">
-                <label class="form-label" for="name-field">Name <span class="required-field">*</span></label>
-                <input id="name-field" class="form-input-text" type="text" name="entry.610708785" value="" placeholder="Name" required>
-            </fieldset>
-            <fieldset class="form-group">
-                <label class="form-label" for="email-field">Email <span class="required-field">*</span></label>
-                <input id="email-field" class="form-input-text" type="email" name="entry.1719665273" value="" placeholder="Email" required>
-            </fieldset>
-            <fieldset class="form-group">
-                <label class="form-label" for="message-field">Message <span class="required-field">*</span></label>
-                <textarea id="message-field" class="form-input-textarea" type="text" name="entry.1633536652" value="" placeholder="Message" required></textarea>
-            </fieldset>
-            <!-- Honeypot — hidden from real users, bots will fill it -->
-            <div style="position:absolute;left:-9999px;" aria-hidden="true">
-                <label for="website-url">Website</label>
-                <input type="text" id="website-url" name="website" tabindex="-1" autocomplete="off" />
-            </div>
-            <fieldset class="form-group">
-                <div class="button-container">
-                    <button class="submit-button" type="submit" name="button" value="send">Submit</button>
-                </div>
-            </fieldset>
-        </form>
-        <article class="article" id="contact-icons">
-            <ul class="contact-icons-container" aria-label="Social links">
-                <li class="contact-list-item">
-                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/mpvazquez" aria-label="Github profile">
-                        <img class="social-icons" src="images/github.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-                <li class="contact-list-item">
-                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/marcopvazquez" aria-label="LinkedIn profile">
-                        <img class="social-icons" src="images/linkedin.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-                <li class="contact-list-item">
-                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/marcopvazquez" aria-label="Twitter profile">
-                        <img class="social-icons" src="images/twitter.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-                <li class="contact-list-item">
-                    <a class="link" target="_blank" rel="noopener noreferrer" href="https://instagram.com/nycmarcopolo" aria-label="Instagram profile">
-                        <img class="social-icons" src="images/instagram.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-                <li class="contact-list-item">
-                    <a class="link" href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" aria-label="Send email">
-                        <img class="social-icons" src="images/email.png" alt="" aria-hidden="true" />
-                    </a>
-                </li>
-            </ul>
-        </article>
-    </section>
-
-    <footer class="container" id="footer">
-        <hr class="mobile-show" />
-        <p class="paragraph" id="footer-text">This website was designed and built from scratch by <br class="mobile-show" /> Marco Pretell-V&aacute;zquez</p>
-    </footer>
-
-    <div id="modal-background" class="modal-background hidden"></div>
-    <div id="confirmation-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <button id="close-button" class="close-button" value="close" title="close modal" aria-labelledby="close-label">
-            <span id="close-label" class="hidden">Close</span>
-        </button>
-        <p class="h2" id="modal-title">Your message has been sent!</p>
-        <p class="paragraph">Thank you for contacting me.</p>
+<!-- ============ HERO ============ -->
+<main id="main">
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-meta">
+      <span id="portfolio-label">① Portfolio</span>
+      <span class="status"><span class="status-dot"></span> Currently open to new opportunities</span>
     </div>
 
-    <iframe name="iframe" id="iframe" style="display:none;"></iframe>
-    <script src="vendors/velocity.js"></script>
-    <script src="js/script.js"></script>
+    <h1>
+      <span class="line"><span>Design systems,</span></span>
+      <span class="line"><span>accessibility &amp;</span></span>
+      <span class="line"><span><em class="amp">performance</em>, at scale.</span></span>
+    </h1>
+
+    <div class="hero-grid">
+      <p class="hero-lede reveal">
+        I'm <strong>Marco</strong>, a NYC-based <em>UI Engineer</em> who has spent over a decade architecting
+        and shipping production UI on high-traffic, multi-brand digital platforms. I build the
+        design systems, component libraries, and accessible front-end architecture that scale
+        across brands and codify engineering practices for cross-team adoption.
+      </p>
+      <aside class="hero-side reveal delay-1">
+        <div class="hero-side-row">
+          <div class="label">Based</div>
+          <div class="value">New&nbsp;York&nbsp;City · ET</div>
+        </div>
+        <div class="hero-side-row">
+          <div class="label">Focus</div>
+          <div class="value">Design Systems · Accessibility (WCAG 2.2 AA) · Performance Optimization
+          </div>
+        </div>
+        <div class="hero-side-row">
+          <div class="label">Most recent</div>
+          <div class="value">Lead UI Engineer · FullBeauty Brands</div>
+        </div>
+        <div class="hero-side-row">
+          <div class="label">Contact</div>
+          <div class="value"><a href="mailto:marco.pvazquez@gmail.com">marco.pvazquez@gmail.com</a></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="hero-cta-row reveal delay-2">
+      <a class="btn primary" href="#work">
+        See selected work
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn" href="marco-pretell-vazquez-cv.pdf" target="_blank" rel="noopener">
+        Download résumé (PDF)
+      </a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Design Systems</span>
+      <span class="marquee-item">React · Next.js · TypeScript</span>
+      <span class="marquee-item">WCAG 2.2 AA Accessibility</span>
+      <span class="marquee-item">Core Web Vitals</span>
+      <span class="marquee-item">HTML · CSS</span>
+      <span class="marquee-item">Component Architecture</span>
+      <span class="marquee-item">Headless SFCC</span>
+      <span class="marquee-item">Design ↔ Code</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Design Systems</span>
+      <span class="marquee-item">React · Next.js · TypeScript</span>
+      <span class="marquee-item">WCAG 2.2 AA Accessibility</span>
+      <span class="marquee-item">Core Web Vitals</span>
+      <span class="marquee-item">HTML · CSS</span>
+      <span class="marquee-item">Component Architecture</span>
+      <span class="marquee-item">Headless SFCC</span>
+      <span class="marquee-item">Design ↔ Code</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">② About</div>
+      <h2 class="section-title">A UI engineer with <em>design fluency</em>.</h2>
+    </div>
+
+    <div class="about-grid">
+      <figure class="about-portrait reveal">
+        <img src="assets/profile-pic.jpg" alt="Portrait of Marco Pretell-Vázquez" />
+        <span class="badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          NYC · ET
+        </span>
+      </figure>
+
+      <div class="about-copy reveal delay-1">
+        <p>
+          I specialize in building accessible, performant web interfaces and the
+          <em style="color:var(--accent); font-style: italic;">design systems</em> that power them,
+          with modern tooling like React, Next.js, and TypeScript on top of a strong foundation
+          in semantic HTML and CSS architecture. My work is CSS-first to minimize JS dependencies,
+          with components designed to scale across multi-brand platforms.
+        </p>
+        <p>
+          Over a career spent between e-commerce and enterprise SaaS, I've partnered with
+          Product, Design, UX and Engineering to translate design intent into high-fidelity,
+          scalable code. At FullBeauty Brands I architected a design system scaling across 19
+          brands and spearheaded the front-end migration from SFCC SiteGenesis to SFRA.
+        </p>
+        <p>
+          My focus is the UI/component layer, with reusable systems, accessible patterns, and 
+          component APIs designed for cross-team adoption.
+        </p>
+        <div class="sig">Marco</div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="num" id="years-num">12<sup>+</sup></div>
+            <div class="label">Years shipping</div>
+          </div>
+          <div class="stat">
+            <div class="num">19</div>
+            <div class="label">Brands on one system</div>
+          </div>
+          <div class="stat">
+            <div class="num">AA</div>
+            <div class="label">WCAG 2.2 target</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">③ Selected Work</div>
+      <h2 class="section-title">One system, <em>nineteen</em> storefronts.</h2>
+    </div>
+
+    <div class="work-list">
+
+      <!-- FLAGSHIP: FBB Design System -->
+      <article class="work reveal">
+        <a class="work-shot" href="https://designsystem.fbbrands.com" target="_blank" rel="noopener" aria-label="Open FullBeauty Brands Design System">
+          <img src="assets/design-system.png" alt="Screenshot of the FullBeauty Brands design system component library showing Text Input variants." loading="lazy" />
+        </a>
+        <div class="work-body">
+          <div class="work-top">
+            <div class="work-year">Flagship · Lead UI Engineer</div>
+            <h3 class="work-title">FullBeauty Brands. A <em>multi-brand</em> design system.</h3>
+            <p class="work-summary">
+              Architected and shipped a design system scaling across <strong>19 brands</strong>. Design
+              tokens via Sass and CSS Custom Properties, a CSS-first reusable component library with
+              responsive cross-browser support, and documentation for component states and usage.
+              Distributed as a required dependency, packaged with Webpack as a versioned private
+              npm module powering both SFCC and headless codebases.
+            </p>
+            <div class="work-meta">
+              <span class="k">Role</span>  <span class="v">Lead UI Engineer · architecture, specs, rollout</span>
+              <span class="k">Stack</span>
+              <span class="v">
+                <div class="work-tags">
+                  <span class="tag">Sass + CSS Custom Properties</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Webpack</span>
+                  <span class="tag">Bootstrap</span>
+                  <span class="tag">SFCC</span>
+                </div>
+              </span>
+              <span class="k">Impact</span> <span class="v">19 brands unified · 90+ Lighthouse a11y minimum · ~25% reduction in recurring UI fix work</span>
+            </div>
+          </div>
+          <a class="work-cta" href="https://designsystem.fbbrands.com" target="_blank" rel="noopener">
+            designsystem.fbbrands.com <span class="arrow">↗</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Principles / Philosophy block replaces extra case studies -->
+    <div class="principles reveal" style="margin-top: clamp(48px, 6vw, 80px); display:grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 4vw, 48px); border-top: 1px solid var(--rule); padding-top: clamp(40px, 5vw, 64px);">
+      <div style="font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);">How I work</div>
+      <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: clamp(20px, 3vw, 36px);">
+        <div>
+          <div style="font-family:var(--serif); font-size:26px; letter-spacing:-0.01em; margin-bottom:6px;">CSS is the <em style="color:var(--accent); font-style:italic;">foundation</em></div>
+          <p style="color:var(--ink-2); font-size:15px; line-height:1.55; margin:0;">CSS-first is an architectural choice, not just a styling preference. Less JS at runtime means faster initial paint, simpler component state, and cleaner cross-browser behavior. I default to CSS for theming, transitions, and state where I can.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--serif); font-size:26px; letter-spacing:-0.01em; margin-bottom:6px;">Accessibility is <em style="color:var(--accent); font-style:italic;">architecture</em></div>
+          <p style="color:var(--ink-2); font-size:15px; line-height:1.55; margin:0;">WCAG 2.2 AA isn't a polish pass. It shapes semantics, focus order, keyboard flows, and the component API from the first line of code.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--serif); font-size:26px; letter-spacing:-0.01em; margin-bottom:6px;">Performance is a <em style="color:var(--accent); font-style:italic;">feature</em></div>
+          <p style="color:var(--ink-2); font-size:15px; line-height:1.55; margin:0;">Core Web Vitals translate directly to revenue. I default to CSS over JS, lazy-load below the fold, right-size imagery, and measure before shipping.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--serif); font-size:26px; letter-spacing:-0.01em; margin-bottom:6px;">Engineering shaped by <em style="color:var(--accent); font-style:italic;">design</em></div>
+          <p style="color:var(--ink-2); font-size:15px; line-height:1.55; margin:0;">The seam between design and engineering is where systems hold up or fall apart. I pressure-test interaction patterns with designers and shape the specs before they reach implementation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case studies on request notice -->
+    <!-- <div class="reveal" style="margin-top: clamp(40px, 5vw, 64px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; padding: 20px 24px; border: 1px dashed var(--rule); border-radius: var(--radius); background: var(--card);">
+      <div>
+        <div style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:4px;">Also shipped</div>
+        <div style="font-family:var(--serif); font-size:20px; letter-spacing:-0.01em;">Headless commerce UI at FullBeauty · Browse &amp; Search at Bloomingdale's · Enterprise SaaS page-builder at Sprinklr</div>
+      </div>
+      <a class="btn" href="#contact" style="flex-shrink:0;">Request a case study</a>
+    </div> -->
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">④ Experience</div>
+      <h2 class="section-title">A career, <em>mostly</em> in NYC.</h2>
+    </div>
+
+    <div class="xp">
+      <aside class="xp-aside reveal">
+        <div class="kv">
+          <span class="k">Location</span>
+          <span class="v">New York, NY</span>
+        </div>
+        <div class="kv">
+          <span class="k">Education</span>
+          <span class="v">Ball State University · BA, Intl. Business · 2009</span>
+          <span class="v" style="color:var(--muted); font-size:12px;">General Assembly · WDI · 2014</span>
+        </div>
+        <div class="kv">
+          <span class="k">Languages</span>
+          <span class="v">English (native) · Spanish (fluent)</span>
+        </div>
+        <div class="kv">
+          <span class="k">Status</span>
+          <span class="v">Currently open to new opportunities</span>
+        </div>
+      </aside>
+
+      <ol class="xp-list" style="list-style:none; margin:0; padding:0;">
+
+        <li class="xp-item reveal">
+          <div>
+            <h3 class="xp-role">Lead UI Engineer</h3>
+            <div class="xp-company">FullBeauty Brands · promoted from Senior UI Engineer (2023)</div>
+            <p class="xp-blurb">
+              Architected a design system scaling across 19 brands (Sass + CSS Custom Properties tokens,
+              CSS-first component library, packaged via Webpack as a versioned private npm module).
+              Built the UI/component layer of a headless commerce app (React, Next.js, TypeScript)
+              delivering accessible, A/B-tested SSR components across Checkout, Search and PDP,
+              integrated via REST APIs. Established cross-team UI standards including a 90+ Lighthouse
+              accessibility minimum, reducing recurring UI fix work by ~25%. Spearheaded the front-end 
+              migration from SFCC SiteGenesis to SFRA with an isolation approach that made the design 
+              system the company-wide standard.
+            </p>
+          </div>
+          <div class="xp-date">Jul 2020 – Nov 2025</div>
+        </li>
+
+        <li class="xp-item reveal">
+          <div>
+            <h3 class="xp-role">UI Developer</h3>
+            <div class="xp-company">Bloomingdale's</div>
+            <p class="xp-blurb">
+              Built and optimized components for high-traffic Browse &amp; Search pages in Backbone.js,
+              Marionette and Sass. Iterated through A/B tests, shipped accessible components into a
+              company-wide style guide and pattern library, raised Jest coverage past 80%, and shipped
+              CSS-animation, lazy-load and responsive performance wins.
+            </p>
+          </div>
+          <div class="xp-date">Apr 2018 – Jul 2020</div>
+        </li>
+
+        <li class="xp-item reveal">
+          <div>
+            <h3 class="xp-role">Software Engineer</h3>
+            <div class="xp-company">Sprinklr</div>
+            <p class="xp-blurb">
+              Engineered reusable, accessible components and templates for an enterprise SaaS
+              drag-and-drop site-builder using React, Redux and Sass. Delivered multi-tenant theming
+              for Fortune 500 clients on a shared component foundation. Established CSS standards
+              across the team and advocated for CSS-first implementations to minimize JS dependencies.
+            </p>
+          </div>
+          <div class="xp-date">Sep 2014 – Sep 2017</div>
+        </li>
+
+        <li class="xp-item reveal">
+          <div>
+            <h3 class="xp-role">Junior Developer</h3>
+            <div class="xp-company">Branderati · acquired by Sprinklr (2014)</div>
+            <p class="xp-blurb">
+              Built custom branded micro-sites for influencer-marketing clients in JavaScript, CSS3 and 
+              Foundation. Implemented D3.js data-visualization features for platform analytics.
+            </p>
+          </div>
+          <div class="xp-date">Jun 2014 – Sep 2014</div>
+        </li>
+
+        <li class="xp-item reveal">
+          <div>
+            <h3 class="xp-role">Expert in Residence · WDI Graduate</h3>
+            <div class="xp-company">General Assembly</div>
+            <p class="xp-blurb">
+              Completed the 12-week Web Development Immersive, then hired on contract to mentor
+              students through the same program: Ruby on Rails, Git, JavaScript, testing, and
+              programming methodologies.
+            </p>
+          </div>
+          <div class="xp-date">Dec 2013 – Jul 2014</div>
+        </li>
+
+        <li class="xp-item reveal">
+          <div>
+            <h3 class="xp-role">Community Coordinator</h3>
+            <div class="xp-company">StartOut</div>
+            <p class="xp-blurb">
+              Managed web content across the organization.
+            </p>
+          </div>
+          <div class="xp-date">2012 – 2013</div>
+        </li>
+
+        <li class="xp-item reveal">
+          <div>
+            <h3 class="xp-role">Web / Program Associate</h3>
+            <div class="xp-company">Global Healthy Living Fdn</div>
+            <p class="xp-blurb">
+              First hands-on experience with HTML and CSS, managing organizational websites.
+            </p>
+          </div>
+          <div class="xp-date">2010 – 2012</div>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT / SKILLS ============ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">⑤ Skills</div>
+      <h2 class="section-title">The <em>toolkit</em>.</h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-group reveal">
+        <div class="skill-head">
+          <h3 class="skill-title">Core UI</h3>
+          <span class="skill-count">08</span>
+        </div>
+        <ul class="skill-list" role="list">
+          <li class="core">Design Systems · Design Tokens</li>
+          <li class="core">Accessibility (WCAG 2.2 AA / ARIA)</li>
+          <li class="core">Core Web Vitals</li>
+          <li class="core">HTML5</li>
+          <li class="core">Bootstrap</li>
+          <li class="core">CSS3 · Sass · CSS Custom Properties</li>
+          <li>Mobile-First · Responsive Design</li>
+          <li>Component Architecture</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal delay-1">
+        <div class="skill-head">
+          <h3 class="skill-title">Languages &amp; Frameworks</h3>
+          <span class="skill-count">05</span>
+        </div>
+        <ul class="skill-list" role="list">
+          <li class="core">TypeScript</li>
+          <li class="core">JavaScript (ES6+)</li>
+          <li class="core">React</li>
+          <li class="core">Next.js</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal delay-2">
+        <div class="skill-head">
+          <h3 class="skill-title">Platforms &amp; Tooling</h3>
+          <span class="skill-count">08</span>
+        </div>
+        <ul class="skill-list" role="list">
+          <li class="core">Salesforce Commerce Cloud (SFCC)</li>
+          <li>Webpack</li>
+          <li>Git</li>
+          <li>CI/CD (Jenkins)</li>
+          <li>Azure</li>
+          <li>Lighthouse</li>
+          <li>VoiceOver</li>
+          <li>Jira</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal delay-3">
+        <div class="skill-head">
+          <h3 class="skill-title">Workflow &amp; AI</h3>
+          <span class="skill-count">06</span>
+        </div>
+        <ul class="skill-list" role="list">
+          <li class="core">AI-assisted dev (Claude, GitHub Copilot)</li>
+          <li class="core">Design fluency</li>
+          <li>Spec shaping</li>
+          <li>Code review & mentorship</li>
+          <li>Agile · A/B testing</li>
+          <li>Adobe XD</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-num">⑥ Contact</div>
+      <h2 class="section-title">Let's <em>talk</em>.</h2>
+    </div>
+
+    <div class="contact">
+      <div class="reveal">
+        <h3 class="contact-hook">Building a <em>design system</em> or shipping <em>multi-brand UI</em>?</h3>
+        <p class="contact-lede">
+          Open to conversations about roles, collaborations, or design system work.
+          Based in New York; comfortable remote or hybrid across US &amp; EU hours.
+        </p>
+
+        <ul class="contact-links">
+          <li><a href="mailto:marco.pvazquez@gmail.com">
+            <span class="k">Email</span>
+            <span>marco.pvazquez@gmail.com</span>
+            <span class="arrow">↗</span>
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/marcopvazquez" target="_blank" rel="noopener">
+            <span class="k">LinkedIn</span>
+            <span>/in/marcopvazquez</span>
+            <span class="arrow">↗</span>
+          </a></li>
+          <li><a href="https://github.com/mpvazquez" target="_blank" rel="noopener">
+            <span class="k">GitHub</span>
+            <span>@mpvazquez</span>
+            <span class="arrow">↗</span>
+          </a></li>
+          <li><a href="https://designsystem.fbbrands.com" target="_blank" rel="noopener">
+            <span class="k">Design System</span>
+            <span>designsystem.fbbrands.com</span>
+            <span class="arrow">↗</span>
+          </a></li>
+          <li><a href="marco-pretell-vazquez-cv.pdf" target="_blank" rel="noopener">
+            <span class="k">Résumé</span>
+            <span>Download PDF</span>
+            <span class="arrow">↗</span>
+          </a></li>
+        </ul>
+      </div>
+
+      <form class="contact-form reveal delay-1" id="contactForm"
+            method="POST" target="iframe"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
+        <h4 class="form-title">Send a quick note</h4>
+
+        <div class="field">
+          <label>Purpose *</label>
+          <div class="radio-row">
+            <input type="radio" id="p-biz" name="entry.633803438" value="Business" required>
+            <label for="p-biz">Business</label>
+            <input type="radio" id="p-per" name="entry.633803438" value="Personal">
+            <label for="p-per">Personal</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cf-name">Name *</label>
+          <input id="cf-name" type="text" name="entry.610708785" placeholder="Your name" required>
+        </div>
+
+        <div class="field">
+          <label for="cf-email">Email *</label>
+          <input id="cf-email" type="email" name="entry.1719665273" placeholder="you@company.com" required>
+        </div>
+
+        <div class="field">
+          <label for="cf-msg">Message *</label>
+          <textarea id="cf-msg" name="entry.1633536652" placeholder="What are you building?" required></textarea>
+        </div>
+
+        <button class="submit" type="submit">Send message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+</main>
+<footer class="footer">
+  <div class="brand-mini">Marco Pretell-Vázquez</div>
+  <div>Designed &amp; built from scratch · NYC · © <span id="year"></span></div>
+  <div><a href="#top" style="border-bottom:1px solid var(--rule);">Back to top ↑</a></div>
+</footer>
+
+<iframe name="iframe" id="iframe" style="display:none;" title="form-target"></iframe>
+
+<script>
+  // Evergreen values, inlined so caching layers can't stale it.
+  (function () {
+    try {
+      document.body.classList.add('js-ready');
+      var careerStart = 2013;
+      var now = new Date().getFullYear();
+      var years = now - careerStart;
+      var yrsEl = document.getElementById('years-num');
+      if (yrsEl) yrsEl.innerHTML = years + '<sup>+</sup>';
+      var portfolioLabel = document.getElementById('portfolio-label');
+      if (portfolioLabel) portfolioLabel.textContent = '\u2460 Portfolio \u00b7 ' + now;
+      var yrFooter = document.getElementById('year');
+      if (yrFooter) yrFooter.textContent = now;
+      // Hero headline safety net.
+      setTimeout(function () {
+        var spans = document.querySelectorAll('.hero h1 .line > span');
+        for (var i = 0; i < spans.length; i++) {
+          spans[i].style.transform = 'translateY(0)';
+          spans[i].style.opacity = '1';
+        }
+      }, 1400);
+    } catch (e) {}
+  })();
+</script>
+
+<script src="js/portfolio.js?v=2"></script>
 </body>
 </html>
