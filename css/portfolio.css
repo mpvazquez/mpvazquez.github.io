@@ -1,5 +1,4 @@
 /* Marco Pretell-Vázquez · Portfolio
-   Editorial, minimal, engineer-polished
    ============================================ */
 
 :root {
@@ -49,7 +48,6 @@ html[data-theme="dark"] {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
 }
 
 body {
