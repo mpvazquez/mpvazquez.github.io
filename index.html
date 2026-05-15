@@ -595,10 +595,10 @@
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
             <h4 class="form-title">Send a quick note</h4>
 
-            <div class="field">
+            <div class="field" style="display:none;">
             <label>Purpose *</label>
             <div class="radio-row">
-                <input type="radio" id="p-biz" name="entry.633803438" value="Business" required>
+                <input type="radio" id="p-biz" name="entry.633803438" value="Business" checked>
                 <label for="p-biz">Business</label>
                 <input type="radio" id="p-per" name="entry.633803438" value="Personal">
                 <label for="p-per">Personal</label>
@@ -638,7 +638,7 @@
             </p>
             <dl class="receipt-meta">
             <div><dt>From</dt><dd data-receipt-email>—</dd></div>
-            <div><dt>Purpose</dt><dd data-receipt-purpose>—</dd></div>
+            <!-- <div><dt>Purpose</dt><dd data-receipt-purpose>—</dd></div> -->
             <div><dt>Sent</dt><dd data-receipt-time>—</dd></div>
             </dl>
             <div class="receipt-actions">
