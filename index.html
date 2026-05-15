@@ -57,7 +57,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/portfolio.css?v=6" />
+<link rel="stylesheet" href="css/portfolio.css?v=7" />
 <style>
   /* Critical inline overrides */
   .nav-brand { white-space: nowrap; min-width: 0; }
@@ -107,14 +107,52 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div style="display:flex; align-items:center; gap:8px;">
+  <div class="nav-controls">
     <a class="nav-cta" href="./assets/marco-pretell-vazquez-cv-2026.pdf" target="_blank" rel="noopener">Résumé ↗</a>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
     </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navOverlay">
+      <span class="nav-toggle-bars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
   </div>
 </nav>
+
+<!-- ============ MOBILE NAV OVERLAY ============ -->
+<div class="nav-overlay" id="navOverlay" aria-hidden="true" hidden>
+  <div class="nav-overlay-head">
+    <a class="nav-brand" href="#top" data-overlay-close>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Marco&nbsp;Pretell-Vázquez</span>
+    </a>
+    <button class="nav-overlay-close" id="navClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="nav-overlay-links" aria-label="Site sections">
+    <a href="#top"        data-overlay-close><span class="num">①</span><span class="label">Home</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#about"      data-overlay-close><span class="num">②</span><span class="label">About</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#work"       data-overlay-close><span class="num">③</span><span class="label">Selected Work</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#experience" data-overlay-close><span class="num">④</span><span class="label">Experience</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#skills"     data-overlay-close><span class="num">⑤</span><span class="label">Skills</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#contact"    data-overlay-close><span class="num">⑥</span><span class="label">Contact</span><span class="arrow" aria-hidden="true">↗</span></a>
+  </nav>
+  <div class="nav-overlay-foot">
+    <a class="nav-overlay-cta" href="./assets/marco-pretell-vazquez-cv-2026.pdf" target="_blank" rel="noopener" data-overlay-close>
+      Résumé (PDF) ↗
+    </a>
+    <div class="nav-overlay-meta">
+        Designed &amp; built from scratch · NYC · © <span class="year"></span>
+    </div>
+    </div>
+</div>
 
 <!-- ============ HERO ============ -->
 <main id="main">
@@ -655,7 +693,7 @@
 </main>
 <footer class="footer">
   <div class="brand-mini">Marco Pretell-Vázquez</div>
-  <div>Designed &amp; built from scratch · NYC · © <span id="year"></span></div>
+  <div>Designed &amp; built from scratch · NYC · © <span class="year"></span></div>
   <div><a href="#top" style="border-bottom:1px solid var(--rule);">Back to top ↑</a></div>
 </footer>
 
@@ -687,6 +725,6 @@
   })();
 </script>
 
-<script src="js/portfolio.js?v=2"></script>
+<script src="js/portfolio.js?v=3"></script>
 </body>
 </html>

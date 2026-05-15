@@ -26,8 +26,12 @@
   if (portfolioLabel) portfolioLabel.textContent = '\u2460 Portfolio \u00b7 ' + new Date().getFullYear();
 
   // ----- year -----
-  var yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  var yearEl = document.getElementsByClassName('year');
+  if (yearEl.length) {
+    for (var i = 0; i < yearEl.length; i++) {
+      yearEl[i].textContent = new Date().getFullYear();
+    }
+  }
 
   // ----- theme toggle -----
   var root = document.documentElement;
@@ -39,6 +43,98 @@
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('mpv-theme', next); } catch (e) {}
     });
+  }
+
+  // ----- mobile nav overlay -----
+  var navToggle  = document.getElementById('navToggle');
+  var navOverlay = document.getElementById('navOverlay');
+  var navClose   = document.getElementById('navClose');
+  if (navToggle && navOverlay) {
+    var lastFocus = null;
+    var focusables = function () {
+      return navOverlay.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+    };
+
+    var openNav = function () {
+      lastFocus = document.activeElement;
+      navOverlay.hidden = false;
+      // Force a reflow so the opacity transition runs on first paint.
+      void navOverlay.offsetWidth;
+      navOverlay.setAttribute('data-state', 'open');
+      navOverlay.setAttribute('aria-hidden', 'false');
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Close menu');
+      document.body.classList.add('nav-open');
+      // Move focus into the overlay (close button) for keyboard users.
+      var first = focusables()[0];
+      if (first) first.focus();
+    };
+
+    var closeNav = function () {
+      navOverlay.setAttribute('data-state', 'closed');
+      navOverlay.setAttribute('aria-hidden', 'true');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+      document.body.classList.remove('nav-open');
+      // Wait for the opacity transition to finish before hiding from a11y tree.
+      var done = function () {
+        navOverlay.hidden = true;
+        navOverlay.removeEventListener('transitionend', done);
+      };
+      navOverlay.addEventListener('transitionend', done);
+      // Fallback if no transition fires (e.g. prefers-reduced-motion).
+      setTimeout(function () { navOverlay.hidden = true; }, 400);
+      if (lastFocus && typeof lastFocus.focus === 'function') {
+        lastFocus.focus({ preventScroll: true });
+      }
+    };
+
+    navToggle.addEventListener('click', function () {
+      if (navOverlay.getAttribute('data-state') === 'open') closeNav();
+      else openNav();
+    });
+
+    if (navClose) navClose.addEventListener('click', closeNav);
+
+    // Any link tagged data-overlay-close closes the menu after navigation.
+    navOverlay.querySelectorAll('[data-overlay-close]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        // Let the anchor jump first, then close.
+        setTimeout(closeNav, 60);
+      });
+    });
+
+    // ESC closes; Tab is trapped inside the overlay while open.
+    document.addEventListener('keydown', function (e) {
+      if (navOverlay.getAttribute('data-state') !== 'open') return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeNav();
+        return;
+      }
+      if (e.key === 'Tab') {
+        var list = focusables();
+        if (!list.length) return;
+        var first = list[0];
+        var last = list[list.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
+    });
+
+    // Drop overlay state if the viewport grows past the mobile breakpoint
+    // (e.g. rotation, devtools resize) so desktop users never see it stuck open.
+    var mql = window.matchMedia('(min-width: 821px)');
+    var handleMQ = function (ev) {
+      if (ev.matches && navOverlay.getAttribute('data-state') === 'open') closeNav();
+    };
+    if (mql.addEventListener) mql.addEventListener('change', handleMQ);
+    else if (mql.addListener) mql.addListener(handleMQ);
   }
 
   // ----- nav scroll border -----
