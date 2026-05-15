@@ -87,25 +87,107 @@
     reveals.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  // ----- confirmation modal behaviour on form submit -----
+  // ----- confirmation receipt behaviour on form submit -----
   var form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function () {
-      // Let the iframe action happen; optimistically thank the user.
-      setTimeout(function () {
-        var btn = form.querySelector('.submit');
-        if (btn) {
-          btn.textContent = 'Thanks, message sent ✓';
-          btn.disabled = true;
-        }
-        form.reset();
-        setTimeout(function () {
-          if (btn) {
-            btn.textContent = 'Send message →';
-            btn.disabled = false;
-          }
-        }, 4200);
-      }, 400);
+  var stage = document.getElementById('formStage');
+  if (form && stage) {
+    var btn = form.querySelector('.submit');
+    var nameInput = document.getElementById('cf-name');
+    var emailInput = document.getElementById('cf-email');
+    var msgInput = document.getElementById('cf-msg');
+    var receiptName = stage.querySelector('[data-receipt-name]');
+    var receiptEmail = stage.querySelector('[data-receipt-email]');
+    var receiptPurpose = stage.querySelector('[data-receipt-purpose]');
+    var receiptTime = stage.querySelector('[data-receipt-time]');
+    var receipt = stage.querySelector('.receipt');
+    var sendAnother = document.getElementById('sendAnother');
+    var purposeRadios = form.querySelectorAll('input[name="entry.633803438"]');
+    var purposeField = purposeRadios.length ? purposeRadios[0].closest('.field') : null;
+    var purposeErrorEl = null;
+
+    var clearPurposeError = function () {
+      if (purposeField) purposeField.classList.remove('has-error');
+      if (purposeErrorEl && purposeErrorEl.parentNode) {
+        purposeErrorEl.parentNode.removeChild(purposeErrorEl);
+      }
+      purposeErrorEl = null;
+    };
+    var showPurposeError = function () {
+      if (!purposeField) return;
+      purposeField.classList.add('has-error');
+      if (!purposeErrorEl) {
+        purposeErrorEl = document.createElement('div');
+        purposeErrorEl.className = 'field-error';
+        purposeErrorEl.setAttribute('role', 'alert');
+        purposeErrorEl.textContent = 'Pick select an option to continue.';
+        purposeField.appendChild(purposeErrorEl);
+      }
+    };
+
+    // Native HTML5 validation balloon can fire too, but anchoring to the
+    // sr-only radio is awkward. Catch the invalid event for our radios and
+    // suppress the balloon in favour of our inline error.
+    form.addEventListener('invalid', function (e) {
+      if (e.target && e.target.name === 'entry.633803438') {
+        e.preventDefault();
+        showPurposeError();
+      }
+    }, true);
+    // Clear the error as soon as the user picks one.
+    purposeRadios.forEach(function (r) {
+      r.addEventListener('change', clearPurposeError);
     });
+
+    var formatTime = function () {
+      var d = new Date();
+      var h = d.getHours();
+      var m = String(d.getMinutes()).padStart(2, '0');
+      var ap = h >= 12 ? 'PM' : 'AM';
+      var h12 = ((h + 11) % 12) + 1;
+      return h12 + ':' + m + ' ' + ap;
+    };
+
+    form.addEventListener('submit', function () {
+      // Capture values before the form gets reset / iframe submits.
+      var name = (nameInput && nameInput.value) || 'friend';
+      var firstName = name.trim().split(/\s+/)[0] || 'friend';
+      var email = (emailInput && emailInput.value) || '';
+      var purposeRadio = form.querySelector('input[name="entry.633803438"]:checked');
+      var purpose = purposeRadio ? purposeRadio.value : '—';
+
+      if (receiptName) receiptName.textContent = firstName;
+      if (receiptEmail) receiptEmail.textContent = email || '—';
+      if (receiptPurpose) receiptPurpose.textContent = purpose;
+      if (receiptTime) receiptTime.textContent = formatTime();
+
+      // Optimistic loading state — small spinner so success feels earned.
+      stage.setAttribute('data-state', 'sending');
+      if (btn) btn.disabled = true;
+
+      // Swap to receipt after the iframe POST has had a moment to fire.
+      setTimeout(function () {
+        stage.setAttribute('data-state', 'sent');
+        if (receipt) receipt.removeAttribute('aria-hidden');
+        // Move focus to the receipt heading for screen-reader users.
+        var receiptHeading = stage.querySelector('.receipt-title');
+        if (receiptHeading) {
+          receiptHeading.setAttribute('tabindex', '-1');
+          receiptHeading.focus({ preventScroll: true });
+        }
+      }, 650);
+    });
+
+    if (sendAnother) {
+      sendAnother.addEventListener('click', function () {
+        form.reset();
+        clearPurposeError();
+        if (receipt) receipt.setAttribute('aria-hidden', 'true');
+        stage.setAttribute('data-state', 'idle');
+        if (btn) btn.disabled = false;
+        // Return focus to the first field.
+        var firstField = form.querySelector('input, textarea');
+        if (firstField) firstField.focus({ preventScroll: true });
+      });
+    }
   }
 })();
