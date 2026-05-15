@@ -11,6 +11,8 @@
   --rule: #D9D2C4;
   --chip-bg: #EAE4D6;
   --card: #FBF8F2;
+  --input-bg: #EDE7DC;        /* one step below --card, no border needed */
+  --input-bg-hover: #E5DECF;
   --accent: oklch(0.64 0.13 55);   /* warm ochre */
   --accent-soft: oklch(0.64 0.13 55 / 0.12);
   --sage: oklch(0.55 0.04 155);
@@ -36,6 +38,8 @@ html[data-theme="dark"] {
   --rule: #2A2824;
   --chip-bg: #22201C;
   --card: #1A1917;
+  --input-bg: #0c0b0a;        /* one step below --paper */
+  --input-bg-hover: #060504;
   --accent: oklch(0.78 0.13 65);
   --accent-soft: oklch(0.78 0.13 65 / 0.14);
   --sage: oklch(0.72 0.05 155);
@@ -870,15 +874,19 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   font-family: var(--sans);
   font-size: 15px;
   padding: 12px 14px;
-  background: var(--paper);
-  border: 1px solid var(--rule);
+  background: var(--input-bg);
+  border: 1px solid transparent;
   border-radius: 8px;
   color: var(--ink);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
   width: 100%;
+}
+.field input:hover, .field textarea:hover, .field select:hover {
+  background: var(--input-bg-hover);
 }
 .field input:focus, .field textarea:focus, .field select:focus {
   outline: none;
+  background: var(--paper);
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
