@@ -357,11 +357,11 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .nav-overlay-links a:hover .arrow { transform: translate(3px, -3px); color: var(--accent); }
 .nav-overlay-links a .num {
   font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  font-size: 15px;
+  line-height: 1;
   color: var(--muted);
   flex-shrink: 0;
-  width: 26px;
+  width: 32px;
   align-self: center;
   padding-top: 2px;
 }
