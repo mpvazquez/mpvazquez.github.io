@@ -589,38 +589,64 @@
         </ul>
       </div>
 
-      <form class="contact-form reveal delay-1" id="contactForm"
-            method="POST" target="iframe"
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
-        <h4 class="form-title">Send a quick note</h4>
+      <div class="form-stage reveal delay-1" id="formStage" data-state="idle">
+        <form class="contact-form" id="contactForm"
+                method="POST" target="iframe"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
+            <h4 class="form-title">Send a quick note</h4>
 
-        <div class="field">
-          <label>Purpose *</label>
-          <div class="radio-row">
-            <input type="radio" id="p-biz" name="entry.633803438" value="Business" required>
-            <label for="p-biz">Business</label>
-            <input type="radio" id="p-per" name="entry.633803438" value="Personal">
-            <label for="p-per">Personal</label>
-          </div>
+            <div class="field">
+            <label>Purpose *</label>
+            <div class="radio-row">
+                <input type="radio" id="p-biz" name="entry.633803438" value="Business" required>
+                <label for="p-biz">Business</label>
+                <input type="radio" id="p-per" name="entry.633803438" value="Personal">
+                <label for="p-per">Personal</label>
+            </div>
+            </div>
+
+            <div class="field">
+            <label for="cf-name">Name *</label>
+            <input id="cf-name" type="text" name="entry.610708785" placeholder="Your name" required>
+            </div>
+
+            <div class="field">
+            <label for="cf-email">Email *</label>
+            <input id="cf-email" type="email" name="entry.1719665273" placeholder="you@company.com" required>
+            </div>
+
+            <div class="field">
+            <label for="cf-msg">Message *</label>
+            <textarea id="cf-msg" name="entry.1633536652" placeholder="What are you building?" required></textarea>
+            </div>
+
+            <button class="submit" type="submit">
+                <span class="submit-label">Send message →</span>
+                <span class="submit-spinner" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-opacity="0.3" stroke-width="2.4"/><path d="M21 12a9 9 0 0 0-9-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                </span>
+            </button>
+        </form>
+
+        <div class="receipt" role="status" aria-live="polite" aria-hidden="true">
+            <div class="receipt-mark">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4 class="receipt-title">Message received.</h4>
+            <p class="receipt-lede">
+            Thanks, <strong data-receipt-name>friend</strong>. I read everything that lands here and reply within <strong>2 business days</strong>, usually faster.
+            </p>
+            <dl class="receipt-meta">
+            <div><dt>From</dt><dd data-receipt-email>—</dd></div>
+            <div><dt>Purpose</dt><dd data-receipt-purpose>—</dd></div>
+            <div><dt>Sent</dt><dd data-receipt-time>—</dd></div>
+            </dl>
+            <div class="receipt-actions">
+            <a class="receipt-cta primary" href="https://www.linkedin.com/in/marcopvazquez" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+            <button class="receipt-cta ghost" type="button" id="sendAnother">Send another</button>
+            </div>
         </div>
-
-        <div class="field">
-          <label for="cf-name">Name *</label>
-          <input id="cf-name" type="text" name="entry.610708785" placeholder="Your name" required>
-        </div>
-
-        <div class="field">
-          <label for="cf-email">Email *</label>
-          <input id="cf-email" type="email" name="entry.1719665273" placeholder="you@company.com" required>
-        </div>
-
-        <div class="field">
-          <label for="cf-msg">Message *</label>
-          <textarea id="cf-msg" name="entry.1633536652" placeholder="What are you building?" required></textarea>
-        </div>
-
-        <button class="submit" type="submit">Send message →</button>
-      </form>
+      </div>
     </div>
   </div>
 </section>
