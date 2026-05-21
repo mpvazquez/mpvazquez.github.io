@@ -863,7 +863,6 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   position: relative;
   transition: padding 0.3s ease;
 }
-.xp-item:hover { padding-left: 12px; }
 .xp-role {
   font-family: var(--serif);
   font-size: clamp(22px, 2.6vw, 30px);
