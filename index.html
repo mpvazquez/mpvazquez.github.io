@@ -58,8 +58,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" as="style">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="preload" href="css/portfolio.css?v=7" as="style" />
-<link rel="stylesheet" href="css/portfolio.css?v=7" />
+<link rel="preload" href="css/portfolio.css?v=9" as="style" />
+<link rel="stylesheet" href="css/portfolio.css?v=9" />
 <style>
   /* Critical inline overrides */
   .nav-brand { white-space: nowrap; min-width: 0; }
@@ -258,7 +258,7 @@
       <div class="about-copy reveal delay-1">
         <p>
           I specialize in building accessible, performant web interfaces and the
-          <em style="color:var(--accent); font-style: italic;">design systems</em> that power them,
+          <em class="text-accent-em">design systems</em> that power them,
           with modern tooling like React, Next.js, and TypeScript on top of a strong foundation
           in semantic HTML and CSS architecture. My work is CSS-first to minimize JS dependencies,
           with components designed to scale across multi-brand platforms.
@@ -345,35 +345,35 @@
     </div>
 
     <!-- Principles / Philosophy block replaces extra case studies -->
-    <div class="principles reveal" style="margin-top: clamp(48px, 6vw, 80px); display:grid; grid-template-columns: 220px 1fr; gap: clamp(24px, 4vw, 48px); border-top: 1px solid var(--rule); padding-top: clamp(40px, 5vw, 64px);">
-      <div style="font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);">How I work</div>
-      <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: clamp(20px, 3vw, 36px);">
-        <div>
-          <div style="font-family:var(--serif); font-size:26px; letter-spacing:-0.01em; margin-bottom:6px;">CSS is the <em style="color:var(--accent); font-style:italic;">foundation</em></div>
-          <p style="color:var(--ink-2); font-size:15px; line-height:1.55; margin:0;">CSS-first is an architectural choice, not just a styling preference. Less JS at runtime means faster initial paint, simpler component state, and cleaner cross-browser behavior. I default to CSS for theming, transitions, and state where I can.</p>
+    <div class="principles reveal">
+      <div class="principles-eyebrow">How I work</div>
+      <div class="principles-grid">
+        <div class="principles-item">
+          <div class="principles-item-title">CSS is the <em class="text-accent-em">foundation</em></div>
+          <p class="principles-item-body">CSS-first is an architectural choice, not just a styling preference. Less JS at runtime means faster initial paint, simpler component state, and cleaner cross-browser behavior. I default to CSS for theming, transitions, and state where I can.</p>
         </div>
-        <div>
-          <div style="font-family:var(--serif); font-size:26px; letter-spacing:-0.01em; margin-bottom:6px;">Accessibility is <em style="color:var(--accent); font-style:italic;">architecture</em></div>
-          <p style="color:var(--ink-2); font-size:15px; line-height:1.55; margin:0;">WCAG 2.2 AA isn't a polish pass. It shapes semantics, focus order, keyboard flows, and the component API from the first line of code.</p>
+        <div class="principles-item">
+          <div class="principles-item-title">Accessibility is <em class="text-accent-em">architecture</em></div>
+          <p class="principles-item-body">WCAG 2.2 AA isn't a polish pass. It shapes semantics, focus order, keyboard flows, and the component API from the first line of code.</p>
         </div>
-        <div>
-          <div style="font-family:var(--serif); font-size:26px; letter-spacing:-0.01em; margin-bottom:6px;">Performance is a <em style="color:var(--accent); font-style:italic;">feature</em></div>
-          <p style="color:var(--ink-2); font-size:15px; line-height:1.55; margin:0;">Core Web Vitals translate directly to revenue. I default to CSS over JS, lazy-load below the fold, right-size imagery, and measure before shipping.</p>
+        <div class="principles-item">
+          <div class="principles-item-title">Performance is a <em class="text-accent-em">feature</em></div>
+          <p class="principles-item-body">Core Web Vitals translate directly to revenue. I default to CSS over JS, lazy-load below the fold, right-size imagery, and measure before shipping.</p>
         </div>
-        <div>
-          <div style="font-family:var(--serif); font-size:26px; letter-spacing:-0.01em; margin-bottom:6px;">Engineering shaped by <em style="color:var(--accent); font-style:italic;">design</em></div>
-          <p style="color:var(--ink-2); font-size:15px; line-height:1.55; margin:0;">The seam between design and engineering is where systems hold up or fall apart. I pressure-test interaction patterns with designers and shape the specs before they reach implementation.</p>
+        <div class="principles-item">
+          <div class="principles-item-title">Engineering shaped by <em class="text-accent-em">design</em></div>
+          <p class="principles-item-body">The seam between design and engineering is where systems hold up or fall apart. I pressure-test interaction patterns with designers and shape the specs before they reach implementation.</p>
         </div>
       </div>
     </div>
 
     <!-- Case studies on request notice -->
-    <!-- <div class="reveal" style="margin-top: clamp(40px, 5vw, 64px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; padding: 20px 24px; border: 1px dashed var(--rule); border-radius: var(--radius); background: var(--card);">
+    <!-- <div class="also-shipped reveal">
       <div>
-        <div style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:4px;">Also shipped</div>
-        <div style="font-family:var(--serif); font-size:20px; letter-spacing:-0.01em;">Headless commerce UI at FullBeauty · Browse &amp; Search at Bloomingdale's · Enterprise SaaS page-builder at Sprinklr</div>
+        <div class="also-shipped-eyebrow">Also shipped</div>
+        <div class="also-shipped-headline">Headless commerce UI at FullBeauty · Browse &amp; Search at Bloomingdale's · Enterprise SaaS page-builder at Sprinklr</div>
       </div>
-      <a class="btn" href="#contact" style="flex-shrink:0;">Request a case study</a>
+      <a class="btn also-shipped-cta" href="#contact">Request a case study</a>
     </div> -->
   </div>
 </section>
@@ -395,7 +395,7 @@
         <div class="kv">
           <span class="k">Education</span>
           <span class="v">Ball State University · BA, Intl. Business · 2009</span>
-          <span class="v" style="color:var(--muted); font-size:12px;">General Assembly · WDI · 2014</span>
+          <span class="v caption">General Assembly · WDI · 2014</span>
         </div>
         <div class="kv">
           <span class="k">Languages</span>
@@ -407,7 +407,7 @@
         </div>
       </aside>
 
-      <ol class="xp-list" style="list-style:none; margin:0; padding:0;">
+      <ol class="xp-list">
 
         <li class="xp-item reveal">
           <div>
@@ -638,7 +638,7 @@
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSda5h6UlLjP7DiMPvDMFIF4ZpgA1OY3TbwMEwsYZHao9wF7Zg/formResponse?embedded=true">
             <h4 class="form-title">Send a quick note</h4>
 
-            <div class="field" style="display:none;">
+            <div class="field" hidden>
             <label>Purpose *</label>
             <div class="radio-row">
                 <input type="radio" id="p-biz" name="entry.633803438" value="Business" checked>
@@ -699,10 +699,10 @@
 <footer class="footer">
   <div class="brand-mini">Marco Pretell-Vázquez</div>
   <div>Designed &amp; built from scratch · NYC · © <span class="year"></span></div>
-  <div><a href="#top" style="border-bottom:1px solid var(--rule);">Back to top ↑</a></div>
+  <div><a class="link-rule" href="#top">Back to top ↑</a></div>
 </footer>
 
-<iframe name="iframe" id="iframe" style="display:none;" title="form-target"></iframe>
+<iframe name="iframe" id="iframe" hidden title="form-target"></iframe>
 
 <script>
   // Evergreen values, inlined so caching layers can't stale it.
