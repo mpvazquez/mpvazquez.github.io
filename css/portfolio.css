@@ -11,7 +11,7 @@
   --rule: #D9D2C4;
   --chip-bg: #EAE4D6;
   --card: #FBF8F2;
-  --input-bg: #EDE7DC;        /* one step below --card, no border needed */
+  --input-bg: #EDE7DC;        /* one step below --card */
   --input-bg-hover: #E5DECF;
   --accent: oklch(0.64 0.13 55);   /* warm ochre */
   --accent-soft: oklch(0.64 0.13 55 / 0.12);
@@ -232,7 +232,9 @@ section + section { border-top: 1px solid var(--rule); }
   gap: 8px;
 }
 
-/* Hamburger toggle — hidden on desktop, revealed at the mobile breakpoint. */
+/* ============================================
+   Mobile Nav / Hamburger Toggle — hidden on desktop, revealed at the mobile breakpoint.
+   ============================================ */
 .nav-toggle {
   display: none;
   width: 36px; height: 36px;
@@ -282,14 +284,14 @@ body.nav-open .nav-toggle-bars span:nth-child(3) { transform: translateY(-4.2px)
 html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
-@media (max-width: 820px) {
+@media (max-width: 870px) {
   .nav-links { display: none; }
-  .nav-cta   { display: none; }       /* surfaces inside the overlay instead */
+  .nav-cta   { display: none; }
   .nav-toggle { display: inline-grid; }
 }
 
 /* ============================================
-   Mobile Nav Overlay (editorial full-screen menu)
+   Mobile Nav Overlay
    ============================================ */
 .nav-overlay {
   position: fixed;
