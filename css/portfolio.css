@@ -1218,6 +1218,9 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   letter-spacing: 0.06em;
   transition: all 0.2s;
 }
+.radio-row label:hover {
+  border-color: var(--ink);
+}
 /* Visually hide but keep focusable, so the browser's native validation
    balloon has somewhere to anchor on submit-without-selection. */
 .radio-row input {
@@ -1254,6 +1257,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
 /* Dark-mode visibility: --rule is intentionally low-contrast for hairlines,
    but radio pills + ghost CTAs need a stronger edge so they read as buttons. */
 html[data-theme="dark"] .radio-row label { border-color: var(--muted); }
+html[data-theme="dark"] .radio-row label:hover { border-color: var(--ink); }
 html[data-theme="dark"] .receipt-cta.ghost { border-color: var(--muted); }
 html[data-theme="dark"] .receipt-cta.ghost:hover { border-color: var(--ink); }
 
