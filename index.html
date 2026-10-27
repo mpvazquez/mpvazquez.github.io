@@ -58,8 +58,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" as="style">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="preload" href="css/portfolio.css?v=9" as="style" />
-<link rel="stylesheet" href="css/portfolio.css?v=9" />
+<link rel="preload" href="css/portfolio.css?v=11" as="style" />
+<link rel="stylesheet" href="css/portfolio.css?v=11" />
 <style>
   /* Critical inline overrides */
   .nav-brand { white-space: nowrap; min-width: 0; }
@@ -71,7 +71,7 @@
   body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; }
   @keyframes rise { from { transform:translateY(110%); opacity:0; } to { transform:translateY(0); opacity:1; } }
   /* Accessible focus ring */
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  :focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 3px; border-radius: 4px; }
   /* Skip link */
   .skip-link { position:absolute; left:-9999px; top:0; background:var(--ink); color:var(--paper); padding:10px 14px; z-index:200; font-family:var(--mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; }
   .skip-link:focus { left:12px; top:12px; }
@@ -110,7 +110,7 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-controls">
-    <a class="nav-cta" href="./assets/marco-pretell-vazquez-2026-cv.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    <a class="nav-cta" href="./assets/marco-pretell-vazquez-2026-cv.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in new tab)</span></a>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
@@ -126,7 +126,7 @@
 </nav>
 
 <!-- ============ MOBILE NAV OVERLAY ============ -->
-<div class="nav-overlay" id="navOverlay" aria-hidden="true" hidden>
+<div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Site menu" hidden inert>
   <div class="nav-overlay-head">
     <a class="nav-brand" href="#top" data-overlay-close>
       <span class="dot" aria-hidden="true"></span>
@@ -139,17 +139,17 @@
     </button>
   </div>
   <nav class="nav-overlay-links" aria-label="Site sections">
-    <a href="#top"        data-overlay-close><span class="num">①</span><span class="label">Home</span><span class="arrow" aria-hidden="true">↗</span></a>
-    <a href="#about"      data-overlay-close><span class="num">②</span><span class="label">About</span><span class="arrow" aria-hidden="true">↗</span></a>
-    <a href="#work"       data-overlay-close><span class="num">③</span><span class="label">Selected Work</span><span class="arrow" aria-hidden="true">↗</span></a>
-    <a href="#experience" data-overlay-close><span class="num">④</span><span class="label">Experience</span><span class="arrow" aria-hidden="true">↗</span></a>
-    <a href="#skills"     data-overlay-close><span class="num">⑤</span><span class="label">Skills</span><span class="arrow" aria-hidden="true">↗</span></a>
-    <a href="#contact"    data-overlay-close><span class="num">⑥</span><span class="label">Contact</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#top"        data-overlay-close><span class="num" aria-hidden="true">①</span><span class="label">Home</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#about"      data-overlay-close><span class="num" aria-hidden="true">②</span><span class="label">About</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#work"       data-overlay-close><span class="num" aria-hidden="true">③</span><span class="label">Selected Work</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#experience" data-overlay-close><span class="num" aria-hidden="true">④</span><span class="label">Experience</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#skills"     data-overlay-close><span class="num" aria-hidden="true">⑤</span><span class="label">Skills</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="#contact"    data-overlay-close><span class="num" aria-hidden="true">⑥</span><span class="label">Contact</span><span class="arrow" aria-hidden="true">↗</span></a>
   </nav>
   <div class="nav-overlay-foot">
     <a class="nav-overlay-cta" href="./assets/marco-pretell-vazquez-2026-cv.pdf" target="_blank" rel="noopener" data-overlay-close>
-      Résumé (PDF) ↗
-    </a>
+      Résumé (PDF) <span aria-hidden="true">↗</span>
+    <span class="visually-hidden"> (opens in new tab)</span></a>
     <div class="nav-overlay-meta">
         Designed &amp; built from scratch · NYC · © <span class="year"></span>
     </div>
@@ -161,7 +161,7 @@
 <header class="hero" id="top">
   <div class="wrap">
     <div class="hero-meta">
-      <span id="portfolio-label">① Portfolio</span>
+      <span id="portfolio-label"><span aria-hidden="true">①</span> Portfolio</span>
       <span class="status"><span class="status-dot"></span> Currently open to new opportunities</span>
     </div>
 
@@ -195,7 +195,7 @@
         <div class="hero-side-row">
           <div class="label">Contact</div>
           <div class="value">
-            <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank" rel="noopener">
+            <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
                 &#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
             </a>
         </div>
@@ -210,11 +210,12 @@
       </a>
       <a class="btn" href="./assets/marco-pretell-vazquez-2026-cv.pdf" target="_blank" rel="noopener">
         Download résumé (PDF)
-      </a>
+      <span class="visually-hidden"> (opens in new tab)</span></a>
       <a class="btn" href="#contact">Get in touch</a>
     </div>
   </div>
 
+  <div class="marquee-wrap" id="marqueeWrap">
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
       <span class="marquee-item">Design Systems</span>
@@ -236,13 +237,19 @@
       <span class="marquee-item">Design ↔ Code</span>
     </div>
   </div>
+  <button class="marquee-toggle" id="marqueeToggle" type="button">
+    <svg class="icon-pause" viewBox="0 0 10 10" aria-hidden="true"><rect x="1" y="1" width="3" height="8" fill="currentColor"/><rect x="6" y="1" width="3" height="8" fill="currentColor"/></svg>
+    <svg class="icon-play" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>
+    <span class="marquee-toggle-label">Pause</span><span class="visually-hidden"> skills ticker</span>
+  </button>
+  </div>
 </header>
 
 <!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="section-num">② About</div>
+      <div class="section-num"><span aria-hidden="true">②</span> About</div>
       <h2 class="section-title">A UI engineer with <em>design fluency</em>.</h2>
     </div>
 
@@ -301,7 +308,7 @@
 <section id="work">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="section-num">③ Selected Work</div>
+      <div class="section-num"><span aria-hidden="true">③</span> Selected Work</div>
       <h2 class="section-title">One system, <em>nineteen</em> storefronts.</h2>
     </div>
 
@@ -309,7 +316,7 @@
 
       <!-- FLAGSHIP: FBB Design System -->
       <article class="work reveal">
-        <a class="work-shot" href="https://designsystem.fbbrands.com" target="_blank" rel="noopener" aria-label="Open FullBeauty Brands Design System">
+        <a class="work-shot" href="https://designsystem.fbbrands.com" target="_blank" rel="noopener" aria-label="Open FullBeauty Brands Design System (opens in new tab)">
           <img src="assets/design-system.png" alt="Screenshot of the FullBeauty Brands design system component library showing Text Input variants." loading="lazy" />
         </a>
         <div class="work-body">
@@ -341,8 +348,8 @@
             </div>
           </div>
           <a class="work-cta" href="https://designsystem.fbbrands.com" target="_blank" rel="noopener">
-            designsystem.fbbrands.com <span class="arrow">↗</span>
-          </a>
+            designsystem.fbbrands.com <span class="arrow" aria-hidden="true">↗</span>
+          <span class="visually-hidden"> (opens in new tab)</span></a>
         </div>
       </article>
 
@@ -386,12 +393,12 @@
 <section id="experience">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="section-num">④ Experience</div>
+      <div class="section-num"><span aria-hidden="true">④</span> Experience</div>
       <h2 class="section-title">A career in <em>UI Engineering</em>.</h2>
     </div>
 
     <div class="xp">
-      <aside class="xp-aside reveal">
+      <div class="xp-aside reveal">
         <div class="kv">
           <span class="k">Location</span>
           <span class="v">New York, NY</span>
@@ -409,7 +416,7 @@
           <span class="k">Status</span>
           <span class="v">Currently open to new opportunities</span>
         </div>
-      </aside>
+      </div>
 
       <ol class="xp-list">
 
@@ -516,7 +523,7 @@
 <section id="skills">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="section-num">⑤ Skills</div>
+      <div class="section-num"><span aria-hidden="true">⑤</span> Skills</div>
       <h2 class="section-title">The <em>toolkit</em>.</h2>
     </div>
 
@@ -600,7 +607,7 @@
 <section id="contact">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="section-num">⑥ Contact</div>
+      <div class="section-num"><span aria-hidden="true">⑥</span> Contact</div>
       <h2 class="section-title">Let's <em>talk</em>.</h2>
     </div>
 
@@ -613,31 +620,31 @@
         </p>
 
         <ul class="contact-links">
-          <li><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank" rel="noopener">
+          <li><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;+&#100;&#101;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
             <span class="k">Email</span>
             <span>&#109;&#097;&#114;&#099;&#111;&#046;&#112;&#118;&#097;&#122;&#113;&#117;&#101;&#122;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</span>
-            <span class="arrow">↗</span>
+            <span class="arrow" aria-hidden="true">↗</span>
           </a></li>
           <li><a href="https://www.linkedin.com/in/marcopvazquez" target="_blank" rel="noopener">
             <span class="k">LinkedIn</span>
             <span>/in/marcopvazquez</span>
-            <span class="arrow">↗</span>
-          </a></li>
+            <span class="arrow" aria-hidden="true">↗</span>
+          <span class="visually-hidden"> (opens in new tab)</span></a></li>
           <li><a href="https://github.com/mpvazquez" target="_blank" rel="noopener">
             <span class="k">GitHub</span>
             <span>@mpvazquez</span>
-            <span class="arrow">↗</span>
-          </a></li>
+            <span class="arrow" aria-hidden="true">↗</span>
+          <span class="visually-hidden"> (opens in new tab)</span></a></li>
           <li><a href="https://designsystem.fbbrands.com" target="_blank" rel="noopener">
             <span class="k">Design System</span>
             <span>designsystem.fbbrands.com</span>
-            <span class="arrow">↗</span>
-          </a></li>
+            <span class="arrow" aria-hidden="true">↗</span>
+          <span class="visually-hidden"> (opens in new tab)</span></a></li>
           <li><a href="./assets/marco-pretell-vazquez-2026-cv.pdf" target="_blank" rel="noopener">
             <span class="k">Résumé</span>
             <span>Download PDF</span>
-            <span class="arrow">↗</span>
-          </a></li>
+            <span class="arrow" aria-hidden="true">↗</span>
+          <span class="visually-hidden"> (opens in new tab)</span></a></li>
         </ul>
       </div>
 
@@ -673,18 +680,18 @@
             </div>
 
             <button class="submit" type="submit">
-                <span class="submit-label">Send message →</span>
+                <span class="submit-label">Send message <span aria-hidden="true">→</span></span>
                 <span class="submit-spinner" aria-hidden="true">
                     <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-opacity="0.3" stroke-width="2.4"/><path d="M21 12a9 9 0 0 0-9-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
                 </span>
             </button>
         </form>
 
-        <div class="receipt" role="status" aria-live="polite" aria-hidden="true">
+        <div class="receipt" inert>
             <div class="receipt-mark">
             <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h4 class="receipt-title">Message received.</h4>
+            <h4 class="receipt-title" tabindex="-1">Message received.</h4>
             <p class="receipt-lede">
             Thanks, <strong data-receipt-name>friend</strong>. I read everything that lands here and reply within <strong>2 business days</strong>, usually faster.
             </p>
@@ -694,7 +701,7 @@
             <div><dt>Sent</dt><dd data-receipt-time>—</dd></div>
             </dl>
             <div class="receipt-actions">
-            <a class="receipt-cta primary" href="https://www.linkedin.com/in/marcopvazquez" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+            <a class="receipt-cta primary" href="https://www.linkedin.com/in/marcopvazquez" target="_blank" rel="noopener">Connect on LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in new tab)</span></a>
             <button class="receipt-cta ghost" type="button" id="sendAnother">Send another</button>
             </div>
         </div>
@@ -708,7 +715,7 @@
 <footer class="footer">
   <div class="brand-mini">Marco Pretell-Vázquez</div>
   <div>Designed &amp; built from scratch · NYC · © <span class="year"></span></div>
-  <div><a class="link-rule" href="#top">Back to top ↑</a></div>
+  <div><a class="link-rule" href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
 </footer>
 
 <iframe name="iframe" id="iframe" hidden title="form-target"></iframe>
@@ -724,7 +731,7 @@
       var yrsEl = document.getElementById('years-num');
       if (yrsEl) yrsEl.innerHTML = years + '<sup>+</sup>';
       var portfolioLabel = document.getElementById('portfolio-label');
-      if (portfolioLabel) portfolioLabel.textContent = '\u2460 Portfolio \u00b7 ' + now;
+      if (portfolioLabel) portfolioLabel.innerHTML = '<span aria-hidden="true">\u2460</span> Portfolio \u00b7 ' + now;
       var yrFooter = document.getElementById('year');
       if (yrFooter) yrFooter.textContent = now;
       // Hero headline safety net.
@@ -739,6 +746,6 @@
   })();
 </script>
 
-<script src="js/portfolio.js?v=4"></script>
+<script src="js/portfolio.js?v=5"></script>
 </body>
 </html>

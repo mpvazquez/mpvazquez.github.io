@@ -23,7 +23,7 @@
   var yrsEl = document.getElementById('years-num');
   if (yrsEl) yrsEl.innerHTML = years + '<sup>+</sup>';
   var portfolioLabel = document.getElementById('portfolio-label');
-  if (portfolioLabel) portfolioLabel.textContent = '\u2460 Portfolio \u00b7 ' + new Date().getFullYear();
+  if (portfolioLabel) portfolioLabel.innerHTML = '<span aria-hidden="true">\u2460</span> Portfolio \u00b7 ' + new Date().getFullYear();
 
   // ----- year -----
   var yearEl = document.getElementsByClassName('year');
@@ -60,10 +60,10 @@
     var openNav = function () {
       lastFocus = document.activeElement;
       navOverlay.hidden = false;
+      navOverlay.inert = false;
       // Force a reflow so the opacity transition runs on first paint.
       void navOverlay.offsetWidth;
       navOverlay.setAttribute('data-state', 'open');
-      navOverlay.setAttribute('aria-hidden', 'false');
       navToggle.setAttribute('aria-expanded', 'true');
       navToggle.setAttribute('aria-label', 'Close menu');
       document.body.classList.add('nav-open');
@@ -74,18 +74,22 @@
 
     var closeNav = function () {
       navOverlay.setAttribute('data-state', 'closed');
-      navOverlay.setAttribute('aria-hidden', 'true');
+      // inert right away so nothing inside is reachable during the fade-out.
+      navOverlay.inert = true;
       navToggle.setAttribute('aria-expanded', 'false');
       navToggle.setAttribute('aria-label', 'Open menu');
       document.body.classList.remove('nav-open');
       // Wait for the opacity transition to finish before hiding from a11y tree.
-      var done = function () {
-        navOverlay.hidden = true;
+      var isClosed = function () { return navOverlay.getAttribute('data-state') !== 'open'; };
+      var done = function (e) {
+        if (e && e.target !== navOverlay) return; // ignore child link transitions
         navOverlay.removeEventListener('transitionend', done);
+        if (isClosed()) navOverlay.hidden = true;
       };
       navOverlay.addEventListener('transitionend', done);
       // Fallback if no transition fires (e.g. prefers-reduced-motion).
-      setTimeout(function () { navOverlay.hidden = true; }, 400);
+      // Skip if the menu was reopened in the meantime.
+      setTimeout(function () { if (isClosed()) navOverlay.hidden = true; }, 400);
       if (lastFocus && typeof lastFocus.focus === 'function') {
         lastFocus.focus({ preventScroll: true });
       }
@@ -135,6 +139,17 @@
     };
     if (mql.addEventListener) mql.addEventListener('change', handleMQ);
     else if (mql.addListener) mql.addListener(handleMQ);
+  }
+
+  // ----- marquee pause / play (WCAG 2.2.2) -----
+  var marqueeWrap = document.getElementById('marqueeWrap');
+  var marqueeToggle = document.getElementById('marqueeToggle');
+  if (marqueeWrap && marqueeToggle) {
+    var marqueeLabel = marqueeToggle.querySelector('.marquee-toggle-label');
+    marqueeToggle.addEventListener('click', function () {
+      var paused = marqueeWrap.classList.toggle('is-paused');
+      if (marqueeLabel) marqueeLabel.textContent = paused ? 'Play' : 'Pause';
+    });
   }
 
   // ----- nav scroll border -----
@@ -263,13 +278,11 @@
       // Swap to receipt after the iframe POST has had a moment to fire.
       setTimeout(function () {
         stage.setAttribute('data-state', 'sent');
-        if (receipt) receipt.removeAttribute('aria-hidden');
-        // Move focus to the receipt heading for screen-reader users.
+        if (receipt) receipt.inert = false;
+        form.inert = true; // faded-out form leaves the tab order
+        // Move focus to the receipt heading so screen readers announce it (WCAG 4.1.3).
         var receiptHeading = stage.querySelector('.receipt-title');
-        if (receiptHeading) {
-          receiptHeading.setAttribute('tabindex', '-1');
-          receiptHeading.focus({ preventScroll: true });
-        }
+        if (receiptHeading) receiptHeading.focus({ preventScroll: true });
       }, 650);
     });
 
@@ -277,7 +290,8 @@
       sendAnother.addEventListener('click', function () {
         form.reset();
         clearPurposeError();
-        if (receipt) receipt.setAttribute('aria-hidden', 'true');
+        form.inert = false;
+        if (receipt) receipt.inert = true;
         stage.setAttribute('data-state', 'idle');
         if (btn) btn.disabled = false;
         // Return focus to the first field.

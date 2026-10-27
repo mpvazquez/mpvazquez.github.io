@@ -15,6 +15,8 @@
   --input-bg-hover: #E5DECF;
   --accent: oklch(0.64 0.13 55);   /* warm ochre */
   --accent-soft: oklch(0.64 0.13 55 / 0.12);
+  /* Text-safe accent for copy under 24px and fills behind text: 4.9:1 on --paper (WCAG 1.4.3). */
+  --accent-ink: oklch(0.53 0.13 55);
   --sage: oklch(0.55 0.04 155);
   --shadow-sm: 0 1px 2px rgba(20,15,5,0.04), 0 1px 1px rgba(20,15,5,0.02);
   --shadow-md: 0 8px 24px -12px rgba(20,15,5,0.18), 0 2px 6px rgba(20,15,5,0.04);
@@ -54,6 +56,7 @@ html[data-theme="dark"] {
   --input-bg-hover: #060504;
   --accent: oklch(0.78 0.13 65);
   --accent-soft: oklch(0.78 0.13 65 / 0.14);
+  --accent-ink: var(--accent);   /* dark accent already passes (9.2:1) */
   --sage: oklch(0.72 0.05 155);
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
   --shadow-md: 0 8px 24px -12px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.3);
@@ -79,11 +82,14 @@ body {
 }
 
 ::selection {
-  background: var(--accent);
+  background: var(--accent-ink);
   color: var(--paper);
 }
 
 a { color: inherit; text-decoration: none; }
+
+/* The hidden attribute always wins over component display rules (.field, .nav-overlay, ...). */
+[hidden] { display: none !important; }
 
 p { margin: 0; }
 
@@ -124,8 +130,19 @@ img { max-width: 100%; display: block; }
    .work-title em, .contact-hook em — for use inside body copy where
    we don't want to write yet another component rule. */
 .text-accent-em {
-  color: var(--accent);
+  color: var(--accent-ink);
   font-style: italic;
+}
+
+/* Screen-reader-only text. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Subdued, smaller caption text — sans-serif, no transform.
@@ -143,8 +160,8 @@ img { max-width: 100%; display: block; }
   transition: border-color 0.2s, color 0.2s;
 }
 .link-rule:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-ink);
+  color: var(--accent-ink);
 }
 
 /* List reset — strips ul/ol defaults without touching their semantics. */
@@ -361,6 +378,8 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   opacity: 1;
   pointer-events: auto;
 }
+/* Closed overlay must leave the tab order and a11y tree (WCAG 2.4.3, 2.4.7). */
+.nav-overlay[hidden] { display: none; }
 .nav-overlay-head {
   display: flex;
   align-items: center;
@@ -408,7 +427,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   transition: opacity 0.45s ease, transform 0.55s cubic-bezier(.2,.8,.2,1), color 0.2s;
 }
 .nav-overlay-links a:last-child { border-bottom: none; }
-.nav-overlay-links a:hover { color: var(--accent); }
+.nav-overlay-links a:hover { color: var(--accent-ink); }
 .nav-overlay-links a:hover .arrow { transform: translate(3px, -3px); color: var(--accent); }
 .nav-overlay-links a .num {
   font-family: var(--mono);
@@ -460,7 +479,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   color: var(--paper);
   transition: background 0.2s, transform 0.2s;
 }
-.nav-overlay-cta:hover { background: var(--accent); transform: translateY(-1px); }
+.nav-overlay-cta:hover { background: var(--accent-ink); transform: translateY(-1px); }
 .nav-overlay-meta {
   font-family: var(--mono);
   font-size: var(--fs-meta-xs);
@@ -568,7 +587,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   max-width: 54ch;
   color: var(--ink-2);
 }
-.hero-lede em { color: var(--accent); font-style: italic; }
+.hero-lede em { color: var(--accent-ink); font-style: italic; }
 
 .hero-side {
   display: grid;
@@ -594,7 +613,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   color: var(--ink);
 }
 .hero-side-row .value a { border-bottom: 1px solid var(--rule); }
-.hero-side-row .value a:hover { border-color: var(--accent); color: var(--accent); }
+.hero-side-row .value a:hover { border-color: var(--accent-ink); color: var(--accent-ink); }
 
 .hero-cta-row {
   display: flex;
@@ -622,7 +641,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
 .btn.primary {
   background: var(--ink); color: var(--paper);
 }
-.btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.btn.primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); color: var(--paper); }
 .btn svg { width: 14px; height: 14px; }
 
 /* marquee strip under hero */
@@ -655,6 +674,39 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   content: "✦";
   color: var(--accent);
   font-size: 14px;
+}
+.marquee-wrap { position: relative; }
+.marquee:hover .marquee-track,
+.marquee-wrap.is-paused .marquee-track { animation-play-state: paused; }
+.marquee-toggle {
+  position: absolute;
+  top: 50%;
+  right: var(--gutter);
+  transform: translateY(-50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-family: var(--mono);
+  font-size: var(--fs-meta-xs);
+  letter-spacing: var(--tracking-loose);
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--muted);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+.marquee-toggle:hover { border-color: var(--ink); }
+.marquee-toggle svg { width: 10px; height: 10px; }
+.marquee-toggle .icon-play { display: none; }
+.marquee-wrap.is-paused .marquee-toggle .icon-play { display: block; }
+.marquee-wrap.is-paused .marquee-toggle .icon-pause { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none !important; }
+  .marquee-toggle { display: none; }
 }
 @keyframes scroll-left {
   from { transform: translateX(0); }
@@ -743,7 +795,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   color: var(--ink);
 }
 .stat .num sup {
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 0.45em;
   vertical-align: super;
   margin-left: 2px;
@@ -878,7 +930,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   display: inline-block;
   transition: transform 0.3s ease;
 }
-.work-cta:hover { color: var(--accent); }
+.work-cta:hover { color: var(--accent-ink); }
 .work-cta:hover .arrow { transform: translateX(6px); }
 
 /* ============================================
@@ -1011,7 +1063,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   font-size: var(--fs-meta-sm);
   letter-spacing: var(--tracking-loose);
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-ink);
   margin-bottom: 10px;
 }
 .xp-blurb {
@@ -1092,13 +1144,13 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   transition: background 0.2s, color 0.2s;
   cursor: default;
 }
-.skill-list li:hover { background: var(--accent); color: var(--paper); }
+.skill-list li:hover { background: var(--accent-ink); color: var(--paper); }
 .skill-list li.core {
   background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid var(--accent-ink);
+  color: var(--accent-ink);
 }
-.skill-list li.core:hover { background: var(--accent); color: var(--paper); }
+.skill-list li.core:hover { background: var(--accent-ink); color: var(--paper); }
 
 /* ============================================
    Contact
@@ -1149,7 +1201,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
 }
 .contact-links a:hover {
   padding-left: 16px;
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 .contact-links .k {
   font-size: var(--fs-meta-xs);
@@ -1202,8 +1254,8 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
 .field input:focus, .field textarea:focus, .field select:focus {
   outline: none;
   background: var(--paper);
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
+  border-color: var(--accent-ink);
+  box-shadow: 0 0 0 1px var(--accent-ink), 0 0 0 4px var(--accent-soft);
 }
 .field textarea { resize: vertical; min-height: 110px; }
 .radio-row { display: flex; gap: 8px; }
@@ -1235,7 +1287,7 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   border: 0;
 }
 .radio-row input:focus-visible + label {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-ink);
   outline-offset: 2px;
 }
 .radio-row input:checked + label {
@@ -1244,13 +1296,13 @@ body.js-ready .hero h1 .line:nth-of-type(3) > span { animation-delay: 0.28s; mar
   color: var(--paper);
 }
 /* Inline error state — set by JS on submit-without-selection. */
-.field.has-error > label { color: var(--accent); }
-.field.has-error .radio-row label { border-color: var(--accent); }
+.field.has-error > label { color: var(--accent-ink); }
+.field.has-error .radio-row label { border-color: var(--accent-ink); }
 .field-error {
   font-family: var(--mono);
   font-size: var(--fs-meta-xs);
   letter-spacing: 0.04em; /* tighter than meta-label scale */
-  color: var(--accent);
+  color: var(--accent-ink);
   margin-top: 2px;
 }
 
@@ -1280,7 +1332,7 @@ html[data-theme="dark"] .receipt-cta.ghost:hover { border-color: var(--ink); }
   justify-content: center;
   min-height: 46px;
 }
-.submit:hover { background: var(--accent); transform: translateY(-1px); }
+.submit:hover { background: var(--accent-ink); transform: translateY(-1px); }
 .submit:disabled { cursor: default; opacity: 0.9; transform: none; }
 .submit .submit-spinner {
   position: absolute;
@@ -1322,6 +1374,17 @@ html[data-theme="dark"] .receipt-cta.ghost:hover { border-color: var(--ink); }
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+/* Whichever panel is faded out also leaves the tab order (WCAG 2.4.7).
+   visibility flips after the fade so the transition still plays. */
+.form-stage .receipt {
+  visibility: hidden;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(.2,.7,.2,1), visibility 0s linear 0.35s;
+}
+.form-stage[data-state="sent"] .receipt { visibility: visible; transition-delay: 0s; }
+.form-stage[data-state="sent"] .contact-form {
+  visibility: hidden;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(.2,.7,.2,1), visibility 0s linear 0.35s;
 }
 .receipt {
   background: var(--card);
@@ -1413,8 +1476,8 @@ html[data-theme="dark"] .receipt-cta.ghost:hover { border-color: var(--ink); }
   border-color: var(--ink);
 }
 .receipt-cta.primary:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-ink);
+  border-color: var(--accent-ink);
   transform: translateY(-1px);
 }
 .receipt-cta.ghost {
