@@ -17,8 +17,8 @@
   }, 1400);
 
   // ----- evergreen values -----
-  // Years shipping = years since 2013 (WDI / first web-dev work), rounded down.
-  var careerStart = 2013;
+  // Years shipping = years since 2014 (first developer role), rounded down. Matches résumé.
+  var careerStart = 2014;
   var years = new Date().getFullYear() - careerStart;
   var yrsEl = document.getElementById('years-num');
   if (yrsEl) yrsEl.innerHTML = years + '<sup>+</sup>';
